@@ -1,0 +1,10 @@
+{
+  "kick": { "roles": [], "permissions": ["kick_members"] },
+  "ban": { "roles": [], "permissions": ["ban_members"] },
+  "hackban": { "roles": [], "permissions": ["ban_members"] },
+  "purge": { "roles": [], "permissions": ["manage_messages"] },
+  "nick": { "roles": [], "permissions": ["manage_nicknames"] },
+  "warning": { "roles": [], "permissions": ["manage_messages"] },
+  "verify": { "roles": [], "permissions": [] }
+}
+

@@ -14,6 +14,9 @@ from app.modules.authentication.presentation.routers import (
     router as auth_router,
 )
 from app.modules.warns.presentation.routers import router as warns_router
+from app.modules.content.presentation.routers import router as content_router
+from app.modules.permissions.presentation.routers import router as permissions_router
+from app.modules.webhooks.presentation.routers import router as webhooks_router
 
 settings = get_settings()
 
@@ -40,6 +43,9 @@ if settings.cors_origins:
 app.include_router(auth_router)
 app.include_router(warns_router)
 app.include_router(admin_router)
+app.include_router(content_router)
+app.include_router(permissions_router)
+app.include_router(webhooks_router)
 
 
 @app.get("/health")

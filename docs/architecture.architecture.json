@@ -2,7 +2,7 @@
   "schema_version": 1,
   "diagram_type": "architecture",
   "meta": {
-    "title": "Bot Argon — modular clean architecture",
+    "title": "Bot Argon — modular clean architecture (v0.3)",
     "output": "docs/architecture.html",
     "visual_preset": "signal-flow",
     "quality_profile": "standard"
@@ -68,7 +68,7 @@
       "id": "warns",
       "type": "backend",
       "label": "Module: warns",
-      "sublabel": "use cases · repository",
+      "sublabel": "warns + verification · content · webhooks",
       "pos": [
         540,
         100
@@ -96,7 +96,7 @@
       "id": "core",
       "type": "backend",
       "label": "Core",
-      "sublabel": "settings · db · security",
+      "sublabel": "settings · db · security · seeds",
       "pos": [
         540,
         420

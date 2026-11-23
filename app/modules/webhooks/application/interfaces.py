@@ -1,0 +1,26 @@
+from typing import Any, Protocol
+
+from app.modules.webhooks.domain.entities import WebhookEntity
+
+
+class WebhookRepository(Protocol):
+    async def create(self, name: str, url: str, color: int = 0) -> WebhookEntity: ...
+
+    async def list(self) -> list[WebhookEntity]: ...
+
+    async def get(self, webhook_id: int) -> WebhookEntity | None: ...
+
+    async def get_by_name(self, name: str) -> WebhookEntity | None: ...
+
+    async def first_enabled(self) -> WebhookEntity | None: ...
+
+    async def update(self, webhook_id: int, **fields) -> WebhookEntity | None: ...
+
+    async def delete(self, webhook_id: int) -> bool: ...
+
+
+class WebhookClient(Protocol):
+    async def send_embed(
+        self, url: str, payload: dict[str, Any], color_override: int | None = None
+    ) -> bool: ...
+

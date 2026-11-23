@@ -147,7 +147,9 @@ The repository also ships an HTTP API sharing the same SQLite database:
 - Run: uvicorn app.app:app --reload (OpenAPI under /docs).
 - Endpoints: GET /health; POST /api/v1/auth/token (OAuth2 form → JWT);
   GET /api/v1/auth/me; GET /api/v1/warns (JWT); GET /api/v1/admin/health
-  (X-API-Key header); admin-only API-key lifecycle under /api/v1/admin/api-keys.
+  (X-API-Key header); admin-only API-key lifecycle under /api/v1/admin/api-keys;
+  content templates GET/PATCH under /api/v1/admin/content; webhooks
+  (incl. color change) under /api/v1/admin/webhooks; command permissions under /api/v1/admin/permissions.
 - Setup: copy .env.example to .env and set SECRET_KEY; run
   pip install -r requirements-dev.txt and pytest for the test suite.
 - See AGENTS.md for the full repository map and agent conventions.

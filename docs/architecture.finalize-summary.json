@@ -7,13 +7,13 @@
   "quality": "standard",
   "specification": {
     "path": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.architecture.json",
-    "sha256": "11a5a318fab7e1a6393dcad2bd5fe6895fdeecb417d5905bad53b93636d27b84",
-    "bytes": 3731
+    "sha256": "ae4f4d2b3ae153f0fbf1d111e6e18d75541062d6c8a458c86a75fd988515f035",
+    "bytes": 3767
   },
   "artifact": {
     "path": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.html",
-    "sha256": "f3ec794a691f4b9c5cb4fb6f7847da3154fd2bfc5fb7321008f236ce7ca8baf5",
-    "bytes": 933868
+    "sha256": "64447994135c00b911870e07f33b04d56052c5d03a25ffdfc9a2734d3e649a95",
+    "bytes": 934003
   },
   "gates": {
     "validate": "pass",
@@ -69,7 +69,7 @@
     "noticeText": null
   },
   "visualReview": "not-requested",
-  "durationMs": 3005,
+  "durationMs": 3322,
   "browserCheck": {
     "requested": true,
     "ran": true

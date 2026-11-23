@@ -35,4 +35,6 @@ def _run_migrations(url: str) -> None:
 async def init_db() -> None:
     """Apply Alembic migrations to the configured database."""
     await asyncio.to_thread(_run_migrations, _settings.database_url)
+    from app.core.seeds import seed_defaults
+    await seed_defaults(session_factory)
 

@@ -18,8 +18,11 @@ from discord.ext import commands, tasks
 from discord.ext.commands import Context
 from dotenv import load_dotenv
 
-from app.core.database import init_db
+from app.core.database import init_db, session_factory
 from app.modules.discord_bot.infrastructure.repositories import BotWarnGateway
+from app.modules.permissions.application.exceptions import PermissionDenied
+from app.modules.permissions.infrastructure.repositories import SqlAlchemyCommandPermissionRepository
+from app.modules.webhooks.application.message_service import MessageService
 
 load_dotenv()
 
@@ -135,6 +138,7 @@ class DiscordBot(commands.Bot):
         """
         self.logger = logger
         self.warns = BotWarnGateway()
+        self.messages = MessageService(session_factory)
         self.bot_prefix = os.getenv("PREFIX")
         self.invite_link = os.getenv("INVITE_LINK")
 
@@ -187,6 +191,26 @@ class DiscordBot(commands.Bot):
         await self.load_cogs()
         self.status_task.start()
 
+    async def _user_allowed(self, context: Context, rule) -> bool:
+        roles = {r.name for r in context.author.roles}
+        if any(r in roles for r in rule.roles):
+            return True
+        perms = context.author.guild_permissions
+        if any(getattr(perms, p, False) for p in rule.permissions):
+            return True
+        return False
+
+    async def before_invoke(self, context: Context) -> None:
+        command = context.command.name if context.command else None
+        if not command:
+            return
+        async with session_factory() as session:
+            rule = await SqlAlchemyCommandPermissionRepository(session).get(command)
+        if rule is None or not rule.is_restricted:
+            return
+        if not await self._user_allowed(context, rule):
+            raise PermissionDenied()
+
     async def on_message(self, message: discord.Message) -> None:
         """
         The code in this event is executed every time someone sends a message, with or without the prefix
@@ -222,6 +246,9 @@ class DiscordBot(commands.Bot):
         :param context: The context of the normal command that failed executing.
         :param error: The error that has been faced.
         """
+        if isinstance(error, PermissionDenied):
+            await self.messages.send_event("errors.no_permission", channel=context.channel)
+            return
         if isinstance(error, commands.CommandOnCooldown):
             minutes, seconds = divmod(error.retry_after, 60)
             hours, minutes = divmod(minutes, 60)

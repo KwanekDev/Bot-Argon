@@ -6,11 +6,11 @@
   "status": "pass",
   "visualReview": "not-requested",
   "provenance": "current",
-  "deliveryReceiptId": "711e3866-b8c2-460a-ae49-687ef79a5e9e",
+  "deliveryReceiptId": "ac9218eb-596d-4d82-a185-40c7e0a74e7d",
   "artifact": {
     "path": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.html",
-    "sha256": "f3ec794a691f4b9c5cb4fb6f7847da3154fd2bfc5fb7321008f236ce7ca8baf5",
-    "bytes": 933868
+    "sha256": "64447994135c00b911870e07f33b04d56052c5d03a25ffdfc9a2734d3e649a95",
+    "bytes": 934003
   },
   "state": {
     "detail": "read",
@@ -52,16 +52,14 @@
           "viewBoxHeight": 568
         },
         "viewBoxWidth": 1010,
-        "minimumProjectedNodeTextPx": 8.1,
-        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedNodeTextPx": 6.5,
+        "minimumProjectedNonEdgeTextPx": 6.5,
         "minimumProjectedEdgeTextPx": 8.1,
-        "minimumProjectedNodeText": "cogs → use cases",
-        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeText": "warns + verification · content · webhooks",
+        "minimumProjectedNodeTextDetail": "context",
         "minimumProjectedNodeTextOwner": {
-          "kind": "edge",
-          "id": "bot-warns",
-          "from": "bot",
-          "to": "warns"
+          "kind": "node",
+          "id": "warns"
         },
         "minimumRequiredNodeTextPx": 6,
         "readabilityOk": true,
@@ -104,16 +102,14 @@
           "viewBoxHeight": 568
         },
         "viewBoxWidth": 1010,
-        "minimumProjectedNodeTextPx": 8.1,
-        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedNodeTextPx": 6.5,
+        "minimumProjectedNonEdgeTextPx": 6.5,
         "minimumProjectedEdgeTextPx": 8.1,
-        "minimumProjectedNodeText": "cogs → use cases",
-        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeText": "warns + verification · content · webhooks",
+        "minimumProjectedNodeTextDetail": "context",
         "minimumProjectedNodeTextOwner": {
-          "kind": "edge",
-          "id": "bot-warns",
-          "from": "bot",
-          "to": "warns"
+          "kind": "node",
+          "id": "warns"
         },
         "minimumRequiredNodeTextPx": 6,
         "readabilityOk": true,
@@ -156,16 +152,14 @@
           "viewBoxHeight": 568
         },
         "viewBoxWidth": 1010,
-        "minimumProjectedNodeTextPx": 8.1,
-        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedNodeTextPx": 6.5,
+        "minimumProjectedNonEdgeTextPx": 6.5,
         "minimumProjectedEdgeTextPx": 8.1,
-        "minimumProjectedNodeText": "cogs → use cases",
-        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeText": "warns + verification · content · webhooks",
+        "minimumProjectedNodeTextDetail": "context",
         "minimumProjectedNodeTextOwner": {
-          "kind": "edge",
-          "id": "bot-warns",
-          "from": "bot",
-          "to": "warns"
+          "kind": "node",
+          "id": "warns"
         },
         "minimumRequiredNodeTextPx": 6,
         "readabilityOk": true,
@@ -208,16 +202,14 @@
           "viewBoxHeight": 568
         },
         "viewBoxWidth": 1010,
-        "minimumProjectedNodeTextPx": 8.1,
-        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedNodeTextPx": 6.5,
+        "minimumProjectedNonEdgeTextPx": 6.5,
         "minimumProjectedEdgeTextPx": 8.1,
-        "minimumProjectedNodeText": "cogs → use cases",
-        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeText": "warns + verification · content · webhooks",
+        "minimumProjectedNodeTextDetail": "context",
         "minimumProjectedNodeTextOwner": {
-          "kind": "edge",
-          "id": "bot-warns",
-          "from": "bot",
-          "to": "warns"
+          "kind": "node",
+          "id": "warns"
         },
         "minimumRequiredNodeTextPx": 6,
         "readabilityOk": true,
@@ -313,16 +305,14 @@
           "viewBoxHeight": 568
         },
         "viewBoxWidth": 1010,
-        "minimumProjectedNodeTextPx": 8.1,
-        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedNodeTextPx": 6.5,
+        "minimumProjectedNonEdgeTextPx": 6.5,
         "minimumProjectedEdgeTextPx": 8.1,
-        "minimumProjectedNodeText": "cogs → use cases",
-        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeText": "warns + verification · content · webhooks",
+        "minimumProjectedNodeTextDetail": "context",
         "minimumProjectedNodeTextOwner": {
-          "kind": "edge",
-          "id": "bot-warns",
-          "from": "bot",
-          "to": "warns"
+          "kind": "node",
+          "id": "warns"
         },
         "minimumRequiredNodeTextPx": 6,
         "readabilityOk": true,
@@ -365,16 +355,14 @@
           "viewBoxHeight": 568
         },
         "viewBoxWidth": 1010,
-        "minimumProjectedNodeTextPx": 8.1,
-        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedNodeTextPx": 6.5,
+        "minimumProjectedNonEdgeTextPx": 6.5,
         "minimumProjectedEdgeTextPx": 8.1,
-        "minimumProjectedNodeText": "cogs → use cases",
-        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeText": "warns + verification · content · webhooks",
+        "minimumProjectedNodeTextDetail": "context",
         "minimumProjectedNodeTextOwner": {
-          "kind": "edge",
-          "id": "bot-warns",
-          "from": "bot",
-          "to": "warns"
+          "kind": "node",
+          "id": "warns"
         },
         "minimumRequiredNodeTextPx": 6,
         "readabilityOk": true,
@@ -417,16 +405,14 @@
           "viewBoxHeight": 568
         },
         "viewBoxWidth": 1010,
-        "minimumProjectedNodeTextPx": 8.1,
-        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedNodeTextPx": 6.5,
+        "minimumProjectedNonEdgeTextPx": 6.5,
         "minimumProjectedEdgeTextPx": 8.1,
-        "minimumProjectedNodeText": "cogs → use cases",
-        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeText": "warns + verification · content · webhooks",
+        "minimumProjectedNodeTextDetail": "context",
         "minimumProjectedNodeTextOwner": {
-          "kind": "edge",
-          "id": "bot-warns",
-          "from": "bot",
-          "to": "warns"
+          "kind": "node",
+          "id": "warns"
         },
         "minimumRequiredNodeTextPx": 6,
         "readabilityOk": true,
@@ -469,16 +455,14 @@
           "viewBoxHeight": 568
         },
         "viewBoxWidth": 1010,
-        "minimumProjectedNodeTextPx": 8.1,
-        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedNodeTextPx": 6.5,
+        "minimumProjectedNonEdgeTextPx": 6.5,
         "minimumProjectedEdgeTextPx": 8.1,
-        "minimumProjectedNodeText": "cogs → use cases",
-        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeText": "warns + verification · content · webhooks",
+        "minimumProjectedNodeTextDetail": "context",
         "minimumProjectedNodeTextOwner": {
-          "kind": "edge",
-          "id": "bot-warns",
-          "from": "bot",
-          "to": "warns"
+          "kind": "node",
+          "id": "warns"
         },
         "minimumRequiredNodeTextPx": 6,
         "readabilityOk": true,
@@ -526,16 +510,14 @@
           "viewBoxHeight": 568
         },
         "viewBoxWidth": 1010,
-        "minimumProjectedNodeTextPx": 8.1,
-        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedNodeTextPx": 6.5,
+        "minimumProjectedNonEdgeTextPx": 6.5,
         "minimumProjectedEdgeTextPx": 8.1,
-        "minimumProjectedNodeText": "cogs → use cases",
-        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeText": "warns + verification · content · webhooks",
+        "minimumProjectedNodeTextDetail": "context",
         "minimumProjectedNodeTextOwner": {
-          "kind": "edge",
-          "id": "bot-warns",
-          "from": "bot",
-          "to": "warns"
+          "kind": "node",
+          "id": "warns"
         },
         "minimumRequiredNodeTextPx": 6,
         "readabilityOk": true,
@@ -578,16 +560,14 @@
           "viewBoxHeight": 568
         },
         "viewBoxWidth": 1010,
-        "minimumProjectedNodeTextPx": 8.1,
-        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedNodeTextPx": 6.5,
+        "minimumProjectedNonEdgeTextPx": 6.5,
         "minimumProjectedEdgeTextPx": 8.1,
-        "minimumProjectedNodeText": "cogs → use cases",
-        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeText": "warns + verification · content · webhooks",
+        "minimumProjectedNodeTextDetail": "context",
         "minimumProjectedNodeTextOwner": {
-          "kind": "edge",
-          "id": "bot-warns",
-          "from": "bot",
-          "to": "warns"
+          "kind": "node",
+          "id": "warns"
         },
         "minimumRequiredNodeTextPx": 6,
         "readabilityOk": true,
@@ -630,16 +610,14 @@
           "viewBoxHeight": 568
         },
         "viewBoxWidth": 1010,
-        "minimumProjectedNodeTextPx": 8.1,
-        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedNodeTextPx": 6.5,
+        "minimumProjectedNonEdgeTextPx": 6.5,
         "minimumProjectedEdgeTextPx": 8.1,
-        "minimumProjectedNodeText": "cogs → use cases",
-        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeText": "warns + verification · content · webhooks",
+        "minimumProjectedNodeTextDetail": "context",
         "minimumProjectedNodeTextOwner": {
-          "kind": "edge",
-          "id": "bot-warns",
-          "from": "bot",
-          "to": "warns"
+          "kind": "node",
+          "id": "warns"
         },
         "minimumRequiredNodeTextPx": 6,
         "readabilityOk": true,
@@ -682,16 +660,14 @@
           "viewBoxHeight": 568
         },
         "viewBoxWidth": 1010,
-        "minimumProjectedNodeTextPx": 8.1,
-        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedNodeTextPx": 6.5,
+        "minimumProjectedNonEdgeTextPx": 6.5,
         "minimumProjectedEdgeTextPx": 8.1,
-        "minimumProjectedNodeText": "cogs → use cases",
-        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeText": "warns + verification · content · webhooks",
+        "minimumProjectedNodeTextDetail": "context",
         "minimumProjectedNodeTextOwner": {
-          "kind": "edge",
-          "id": "bot-warns",
-          "from": "bot",
-          "to": "warns"
+          "kind": "node",
+          "id": "warns"
         },
         "minimumRequiredNodeTextPx": 6,
         "readabilityOk": true,

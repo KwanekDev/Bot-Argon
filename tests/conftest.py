@@ -40,6 +40,8 @@ async def db_file(tmp_path):
     engine = create_async_engine(url)
     factory = async_sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
 
+    from app.core.seeds import seed_defaults
+    await seed_defaults(factory)
     async with factory() as session:
         users = SqlAlchemyUserRepository(session)
         await users.create("admin", hash_password("admin123"), "admin")

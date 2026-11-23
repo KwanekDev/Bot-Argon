@@ -1,0 +1,75 @@
+{
+  "verify.start": {
+    "title": "Weryfikacja konta Roblox",
+    "description": "Ustaw w profilu Roblox pole About Me na dokładnie: **{code}**\nNastępnie kliknij przycisk poniżej.",
+    "color": 5865,
+    "fields": [],
+    "buttons": [
+      { "label": "Potwierdzam", "style": 3, "custom_id": "verify:confirm" }
+    ]
+  },
+  "verify.confirm": {
+    "title": "Weryfikacja",
+    "description": "Sprawdzam Twój profil Roblox...",
+    "color": 5865,
+    "fields": [],
+    "buttons": []
+  },
+  "verify.success": {
+    "title": "Sukces!",
+    "description": "Powiązano konto Discord z Robloxem (ID: **{roblox_id}**).",
+    "color": 5763719,
+    "fields": [],
+    "buttons": []
+  },
+  "verify.fail_code": {
+    "title": "Weryfikacja nieudana",
+    "description": "Kod w polu About Me nie zgadza się z wygenerowanym. Spróbuj ponownie.",
+    "color": 15548997,
+    "fields": [],
+    "buttons": []
+  },
+  "verify.fail_notfound": {
+    "title": "Weryfikacja nieudana",
+    "description": "Nie udało się odnaleźć profilu Roblox o podanym ID.",
+    "color": 15548997,
+    "fields": [],
+    "buttons": []
+  },
+  "verify.fail_expired": {
+    "title": "Kod wygasł",
+    "description": "Czas na weryfikację minął. Uruchom komendę /verify ponownie.",
+    "color": 15548997,
+    "fields": [],
+    "buttons": []
+  },
+  "verify.already_linked": {
+    "title": "Konto już powiązane",
+    "description": "To konto Discord ma już przypisane konto Roblox.",
+    "color": 15548997,
+    "fields": [],
+    "buttons": []
+  },
+  "errors.no_permission": {
+    "title": "Brak uprawnień",
+    "description": "Nie masz dostępu do tej komendy.",
+    "color": 15548997,
+    "fields": [],
+    "buttons": []
+  },
+  "errors.command_disabled": {
+    "title": "Komenda wyłączona",
+    "description": "Ta komenda jest obecnie wyłączona.",
+    "color": 15548997,
+    "fields": [],
+    "buttons": []
+  },
+  "misc.ping": {
+    "title": "Pong!",
+    "description": "Latencja bota: **{latency}** ms",
+    "color": 5865,
+    "fields": [],
+    "buttons": []
+  }
+}
+
