@@ -59,3 +59,9 @@ Use the bundled Archify skill (`.agents/skills/archify/`) to consult or update t
 project's architecture diagrams whenever you change structure, add subsystems, or
 need to orient yourself. The skill produces interactive HTML diagrams; do not hand-edit
 generated diagrams. After structural changes, regenerate the relevant diagram.
+
+## Security
+
+- Never commit `.env`, `*.db`, `discord.log`, or any credentials — they are gitignored.
+- Before pushing, run `python scripts/check-secrets.py` (scans tracked files for secrets).
+- GitHub secret scanning with push protection is enabled on the repository.
