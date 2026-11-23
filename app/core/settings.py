@@ -26,6 +26,7 @@ class Settings(BaseSettings):
     cors_origins: list[str] = ["http://localhost:3000"]
 
     database_path: str = "database/database.db"
+    verify_channel_id: str = ""
 
     @property
     def database_url(self) -> str:

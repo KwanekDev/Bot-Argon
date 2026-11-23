@@ -190,6 +190,9 @@ class DiscordBot(commands.Bot):
         await init_db()
         await self.load_cogs()
         self.status_task.start()
+        verification_cog = self.get_cog("verification")
+        if verification_cog is not None:
+            await verification_cog.ensure_static_embed()
 
     async def _user_allowed(self, context: Context, rule) -> bool:
         roles = {r.name for r in context.author.roles}

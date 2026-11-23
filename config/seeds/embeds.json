@@ -5,7 +5,11 @@
     "color": 5865,
     "fields": [],
     "buttons": [
-      { "label": "Potwierdzam", "style": 3, "custom_id": "verify:confirm" }
+      {
+        "label": "Potwierdzam",
+        "style": 3,
+        "custom_id": "verify:confirm"
+      }
     ]
   },
   "verify.confirm": {
@@ -70,6 +74,18 @@
     "color": 5865,
     "fields": [],
     "buttons": []
+  },
+  "verify.static": {
+    "title": "Weryfikacja konta Roblox",
+    "description": "Kliknij poniższy przycisk, aby rozpocząć weryfikację i powiązać swoje konto Roblox.",
+    "color": 5865,
+    "fields": [],
+    "buttons": [
+      {
+        "label": "Rozpocznij weryfikację",
+        "style": 3,
+        "custom_id": "verify:start"
+      }
+    ]
   }
 }
-
