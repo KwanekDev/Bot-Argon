@@ -7,13 +7,13 @@
   "quality": "standard",
   "specification": {
     "path": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.architecture.json",
-    "sha256": "b2145239200b7c58cd527ea4fa4b48410470e045489fc3f00c9e9b2eca06f517",
-    "bytes": 3101
+    "sha256": "11a5a318fab7e1a6393dcad2bd5fe6895fdeecb417d5905bad53b93636d27b84",
+    "bytes": 3731
   },
   "artifact": {
     "path": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.html",
-    "sha256": "3bf3d54251154f94e49fc9c891f29270532c553f1601b89c032e1e773882a7b2",
-    "bytes": 930251
+    "sha256": "f3ec794a691f4b9c5cb4fb6f7847da3154fd2bfc5fb7321008f236ce7ca8baf5",
+    "bytes": 933868
   },
   "gates": {
     "validate": "pass",
@@ -64,12 +64,12 @@
     "availableVersion": "3.3.0",
     "releaseNotes": null,
     "checkedAt": "2026-11-23T18:30:48.908Z",
-    "source": "network",
+    "source": "cache",
     "noticeRequired": false,
     "noticeText": null
   },
   "visualReview": "not-requested",
-  "durationMs": 3162,
+  "durationMs": 3005,
   "browserCheck": {
     "requested": true,
     "ran": true
@@ -78,80 +78,80 @@
     "action": "inspect-route-readability",
     "signals": {
       "resolvedCrossovers": 1,
-      "routesOverSuggestedBends": 3
+      "routesOverSuggestedBends": 3,
+      "routesOverSuggestedStretch": 2
     },
     "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
     "affectedRoutes": {
       "crossings": [
         {
           "left": {
-            "id": "api-repo",
+            "id": "api-auth",
             "from": "api",
-            "to": "repo",
-            "label": "async SQL",
+            "to": "auth",
+            "label": "login · API keys",
             "collectionIndex": 3,
             "artifactIndex": 4
           },
           "right": {
-            "id": "repo-db",
-            "from": "repo",
-            "to": "db",
-            "label": "aiosqlite",
-            "collectionIndex": 4,
-            "artifactIndex": 5
+            "id": "warns-core",
+            "from": "warns",
+            "to": "core",
+            "label": "SQLAlchemy",
+            "collectionIndex": 5,
+            "artifactIndex": 6
           },
           "point": [
-            503.96662954709575,
-            237
-          ],
-          "sharedNode": "repo"
+            537,
+            300
+          ]
         }
       ],
       "detours": [
         {
           "relationship": {
-            "id": "bot-repo",
+            "id": "bot-warns",
             "from": "bot",
-            "to": "repo",
-            "label": "warns (DatabaseManager)",
+            "to": "warns",
+            "label": "cogs → use cases",
             "collectionIndex": 2,
             "artifactIndex": 3
           },
-          "bends": 3,
-          "stretch": 1.31
+          "bends": 4,
+          "stretch": 1.376
         },
         {
           "relationship": {
-            "id": "api-repo",
-            "from": "api",
-            "to": "repo",
-            "label": "async SQL",
-            "collectionIndex": 3,
-            "artifactIndex": 4
-          },
-          "bends": 3,
-          "stretch": 1.31
-        },
-        {
-          "relationship": {
-            "id": "archify",
-            "from": "archify",
-            "to": "repo",
-            "label": "diagramy architektury",
+            "id": "warns-core",
+            "from": "warns",
+            "to": "core",
+            "label": "SQLAlchemy",
             "collectionIndex": 5,
             "artifactIndex": 6
           },
-          "bends": 3,
-          "stretch": 1
+          "bends": 4,
+          "stretch": 1.61
+        },
+        {
+          "relationship": {
+            "id": "auth-core",
+            "from": "auth",
+            "to": "core",
+            "label": "security · db",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "bends": 4,
+          "stretch": 1.32
         }
       ],
       "truncated": false
     },
     "hints": [
-      "api → repo and repo → db cross next to repo: move node api or db so the two reach repo from different sides (for example one level with it, one directly above or below it).",
-      "bot → repo needs 3 bends: move node bot or repo so they share a row or column with matching centers, or sit diagonally with a clear corner.",
-      "api → repo needs 3 bends: move node api or repo so they share a row or column with matching centers, or sit diagonally with a clear corner.",
-      "archify → repo needs 3 bends: move node archify or repo so they share a row or column with matching centers, or sit diagonally with a clear corner."
+      "api → auth crosses warns → core: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "bot → warns needs 4 bends: move node bot or warns so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "warns → core needs 4 bends: move node warns or core so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "auth → core needs 4 bends: move node auth or core so they share a row or column with matching centers, or sit diagonally with a clear corner."
     ],
     "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
   }

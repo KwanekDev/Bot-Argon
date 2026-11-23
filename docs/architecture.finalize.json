@@ -5,16 +5,16 @@
   "status": "pass",
   "type": "architecture",
   "quality": "standard",
-  "startedAt": "2026-11-23T18:30:48.672Z",
+  "startedAt": "2026-11-23T18:42:27.894Z",
   "specification": {
     "path": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.architecture.json",
-    "sha256": "b2145239200b7c58cd527ea4fa4b48410470e045489fc3f00c9e9b2eca06f517",
-    "bytes": 3101
+    "sha256": "11a5a318fab7e1a6393dcad2bd5fe6895fdeecb417d5905bad53b93636d27b84",
+    "bytes": 3731
   },
   "artifact": {
     "path": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.html",
-    "sha256": "3bf3d54251154f94e49fc9c891f29270532c553f1601b89c032e1e773882a7b2",
-    "bytes": 930251
+    "sha256": "f3ec794a691f4b9c5cb4fb6f7847da3154fd2bfc5fb7321008f236ce7ca8baf5",
+    "bytes": 933868
   },
   "stages": {
     "validate": {
@@ -40,8 +40,8 @@
         "ok": true,
         "command": "validate",
         "specification": {
-          "sha256": "b2145239200b7c58cd527ea4fa4b48410470e045489fc3f00c9e9b2eca06f517",
-          "bytes": 3101
+          "sha256": "11a5a318fab7e1a6393dcad2bd5fe6895fdeecb417d5905bad53b93636d27b84",
+          "bytes": 3731
         },
         "validation": {
           "checksPassed": 9,
@@ -49,84 +49,45 @@
           "compositionProfile": "standard",
           "compositionStatus": "pass",
           "errors": 0,
-          "warnings": 2,
+          "warnings": 1,
           "compositionIssues": [
             {
               "severity": "warning",
               "code": "composition/label-route-clearance",
-              "label": "aiosqlite",
+              "label": "HTTPS · JWT / API key",
               "labelRelationship": {
-                "id": "repo-db",
-                "from": "repo",
-                "to": "db",
-                "label": "aiosqlite",
-                "collectionIndex": 4,
-                "artifactIndex": 5
+                "id": "http-api",
+                "from": "http",
+                "to": "api",
+                "label": "HTTPS · JWT / API key",
+                "collectionIndex": 1,
+                "artifactIndex": 2
               },
               "otherRelationship": {
-                "id": "api-repo",
+                "id": "api-warns",
                 "from": "api",
-                "to": "repo",
-                "label": "async SQL",
-                "collectionIndex": 3,
-                "artifactIndex": 4
-              },
-              "segmentIndex": 2,
-              "labelRect": {
-                "x": 498.4,
-                "y": 217,
-                "width": 53.2,
-                "height": 14
-              },
-              "clearance": 0,
-              "intersectionLength": 1,
-              "threshold": 2,
-              "from": [
-                504,
-                276
-              ],
-              "to": [
-                504,
-                230
-              ]
-            },
-            {
-              "severity": "warning",
-              "code": "composition/label-route-clearance",
-              "label": "aiosqlite",
-              "labelRelationship": {
-                "id": "repo-db",
-                "from": "repo",
-                "to": "db",
-                "label": "aiosqlite",
+                "to": "warns",
+                "label": "GET warns",
                 "collectionIndex": 4,
                 "artifactIndex": 5
               },
-              "otherRelationship": {
-                "id": "archify",
-                "from": "archify",
-                "to": "repo",
-                "label": "diagramy architektury",
-                "collectionIndex": 5,
-                "artifactIndex": 6
-              },
-              "segmentIndex": 2,
+              "segmentIndex": 0,
               "labelRect": {
-                "x": 498.4,
-                "y": 217,
-                "width": 53.2,
+                "x": 240.6,
+                "y": 312,
+                "width": 110.8,
                 "height": 14
               },
               "clearance": 0,
-              "intersectionLength": 6,
+              "intersectionLength": 14,
               "threshold": 2,
               "from": [
-                504,
-                144
+                348,
+                330
               ],
               "to": [
-                504,
-                223
+                348,
+                245
               ]
             }
           ]
@@ -136,7 +97,7 @@
     "deliver": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 607,
+      "durationMs": 554,
       "command": [
         "C:\\Program Files\\nodejs\\node.exe",
         "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\.agents\\skills\\archify\\bin\\archify.mjs",
@@ -152,19 +113,19 @@
       ],
       "receipt": {
         "schemaVersion": 1,
-        "receiptId": "858af44e-875a-44b5-b889-f9d11b4e4c3c",
+        "receiptId": "711e3866-b8c2-460a-ae49-687ef79a5e9e",
         "ok": true,
         "command": "deliver",
         "type": "architecture",
         "input": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.architecture.json",
         "output": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.html",
         "specification": {
-          "sha256": "b2145239200b7c58cd527ea4fa4b48410470e045489fc3f00c9e9b2eca06f517",
-          "bytes": 3101
+          "sha256": "11a5a318fab7e1a6393dcad2bd5fe6895fdeecb417d5905bad53b93636d27b84",
+          "bytes": 3731
         },
         "artifact": {
-          "sha256": "3bf3d54251154f94e49fc9c891f29270532c553f1601b89c032e1e773882a7b2",
-          "bytes": 930251
+          "sha256": "f3ec794a691f4b9c5cb4fb6f7847da3154fd2bfc5fb7321008f236ce7ca8baf5",
+          "bytes": 933868
         },
         "validation": {
           "checksPassed": 9,
@@ -172,84 +133,45 @@
           "compositionProfile": "standard",
           "compositionStatus": "pass",
           "errors": 0,
-          "warnings": 2,
+          "warnings": 1,
           "compositionIssues": [
             {
               "severity": "warning",
               "code": "composition/label-route-clearance",
-              "label": "aiosqlite",
+              "label": "HTTPS · JWT / API key",
               "labelRelationship": {
-                "id": "repo-db",
-                "from": "repo",
-                "to": "db",
-                "label": "aiosqlite",
-                "collectionIndex": 4,
-                "artifactIndex": 5
+                "id": "http-api",
+                "from": "http",
+                "to": "api",
+                "label": "HTTPS · JWT / API key",
+                "collectionIndex": 1,
+                "artifactIndex": 2
               },
               "otherRelationship": {
-                "id": "api-repo",
+                "id": "api-warns",
                 "from": "api",
-                "to": "repo",
-                "label": "async SQL",
-                "collectionIndex": 3,
-                "artifactIndex": 4
-              },
-              "segmentIndex": 2,
-              "labelRect": {
-                "x": 498.4,
-                "y": 217,
-                "width": 53.2,
-                "height": 14
-              },
-              "clearance": 0,
-              "intersectionLength": 1,
-              "threshold": 2,
-              "from": [
-                504,
-                276
-              ],
-              "to": [
-                504,
-                230
-              ]
-            },
-            {
-              "severity": "warning",
-              "code": "composition/label-route-clearance",
-              "label": "aiosqlite",
-              "labelRelationship": {
-                "id": "repo-db",
-                "from": "repo",
-                "to": "db",
-                "label": "aiosqlite",
+                "to": "warns",
+                "label": "GET warns",
                 "collectionIndex": 4,
                 "artifactIndex": 5
               },
-              "otherRelationship": {
-                "id": "archify",
-                "from": "archify",
-                "to": "repo",
-                "label": "diagramy architektury",
-                "collectionIndex": 5,
-                "artifactIndex": 6
-              },
-              "segmentIndex": 2,
+              "segmentIndex": 0,
               "labelRect": {
-                "x": 498.4,
-                "y": 217,
-                "width": 53.2,
+                "x": 240.6,
+                "y": 312,
+                "width": 110.8,
                 "height": 14
               },
               "clearance": 0,
-              "intersectionLength": 6,
+              "intersectionLength": 14,
               "threshold": 2,
               "from": [
-                504,
-                144
+                348,
+                330
               ],
               "to": [
-                504,
-                223
+                348,
+                245
               ]
             }
           ]
@@ -270,7 +192,7 @@
     "check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 236,
+      "durationMs": 200,
       "command": [
         "C:\\Program Files\\nodejs\\node.exe",
         "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\.agents\\skills\\archify\\bin\\archify.mjs",
@@ -282,8 +204,8 @@
         "ok": true,
         "file": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.html",
         "artifact": {
-          "sha256": "3bf3d54251154f94e49fc9c891f29270532c553f1601b89c032e1e773882a7b2",
-          "bytes": 930251
+          "sha256": "f3ec794a691f4b9c5cb4fb6f7847da3154fd2bfc5fb7321008f236ce7ca8baf5",
+          "bytes": 933868
         },
         "checks": [
           {
@@ -307,8 +229,7 @@
             "name": "label_route_clearance",
             "ok": true,
             "details": [
-              "[composition/label-route-clearance] standard label \"aiosqlite\" on relationship id \"repo-db\" (\"repo\" -> \"db\") is 0px from relationship id \"api-repo\" (\"api\" -> \"repo\") segment 2 [504, 276] -> [504, 230] with 1px hidden by the mask (minimum 2px) — use renderer-supported label controls (message y for sequence; otherwise labelAt, labelDx, labelDy, or labelSegment), or adjust the other relationship route/via/channel.",
-              "[composition/label-route-clearance] standard label \"aiosqlite\" on relationship id \"repo-db\" (\"repo\" -> \"db\") is 0px from relationship id \"archify\" (\"archify\" -> \"repo\") segment 2 [504, 144] -> [504, 223] with 6px hidden by the mask (minimum 2px) — use renderer-supported label controls (message y for sequence; otherwise labelAt, labelDx, labelDy, or labelSegment), or adjust the other relationship route/via/channel."
+              "[composition/label-route-clearance] standard label \"HTTPS · JWT / API key\" on relationship id \"http-api\" (\"http\" -> \"api\") is 0px from relationship id \"api-warns\" (\"api\" -> \"warns\") segment 0 [348, 330] -> [348, 245] with 14px hidden by the mask (minimum 2px) — use renderer-supported label controls (message y for sequence; otherwise labelAt, labelDx, labelDy, or labelSegment), or adjust the other relationship route/via/channel."
             ]
           },
           {
@@ -343,7 +264,7 @@
           "status": "pass",
           "summary": {
             "errors": 0,
-            "warnings": 2
+            "warnings": 1
           },
           "metrics": {
             "properCrossings": 0,
@@ -351,20 +272,20 @@
             "ambiguousCorridors": 0,
             "arrowheadCollisions": 0,
             "containerBorderRuns": 0,
-            "labelRouteClearanceIssues": 2,
+            "labelRouteClearanceIssues": 1,
             "labelCanvasOverflowIssues": 0,
             "minLabelRouteClearance": 0,
             "desktopReadabilityIssues": 0,
             "viewportHeightIssues": 0,
-            "minProjectedNodeTextPx": 8.1,
-            "maxBends": 3,
+            "minProjectedNodeTextPx": 7.5,
+            "maxBends": 4,
             "routesOverSuggestedBends": 3,
-            "maxStretch": 1.31,
-            "routesOverSuggestedStretch": 0,
-            "minSegmentPx": 14,
-            "minInteriorSegmentPx": 46,
-            "shortSegmentCount": 1,
-            "shortEndpointSegmentCount": 1,
+            "maxStretch": 1.61,
+            "routesOverSuggestedStretch": 2,
+            "minSegmentPx": 16,
+            "minInteriorSegmentPx": 16,
+            "shortSegmentCount": 0,
+            "shortEndpointSegmentCount": 0,
             "shortInteriorSegmentCount": 0,
             "microSegmentCount": 0
           },
@@ -378,84 +299,83 @@
             "crossings": [
               {
                 "left": {
-                  "id": "api-repo",
+                  "id": "api-auth",
                   "from": "api",
-                  "to": "repo",
-                  "label": "async SQL",
+                  "to": "auth",
+                  "label": "login · API keys",
                   "collectionIndex": 3,
                   "artifactIndex": 4
                 },
                 "right": {
-                  "id": "repo-db",
-                  "from": "repo",
-                  "to": "db",
-                  "label": "aiosqlite",
-                  "collectionIndex": 4,
-                  "artifactIndex": 5
+                  "id": "warns-core",
+                  "from": "warns",
+                  "to": "core",
+                  "label": "SQLAlchemy",
+                  "collectionIndex": 5,
+                  "artifactIndex": 6
                 },
                 "point": [
-                  503.96662954709575,
-                  237
-                ],
-                "sharedNode": "repo"
+                  537,
+                  300
+                ]
               }
             ],
             "detours": [
               {
                 "relationship": {
-                  "id": "bot-repo",
+                  "id": "bot-warns",
                   "from": "bot",
-                  "to": "repo",
-                  "label": "warns (DatabaseManager)",
+                  "to": "warns",
+                  "label": "cogs → use cases",
                   "collectionIndex": 2,
                   "artifactIndex": 3
                 },
-                "bends": 3,
-                "stretch": 1.31
+                "bends": 4,
+                "stretch": 1.376
               },
               {
                 "relationship": {
-                  "id": "api-repo",
-                  "from": "api",
-                  "to": "repo",
-                  "label": "async SQL",
-                  "collectionIndex": 3,
-                  "artifactIndex": 4
-                },
-                "bends": 3,
-                "stretch": 1.31
-              },
-              {
-                "relationship": {
-                  "id": "archify",
-                  "from": "archify",
-                  "to": "repo",
-                  "label": "diagramy architektury",
+                  "id": "warns-core",
+                  "from": "warns",
+                  "to": "core",
+                  "label": "SQLAlchemy",
                   "collectionIndex": 5,
                   "artifactIndex": 6
                 },
-                "bends": 3,
-                "stretch": 1
+                "bends": 4,
+                "stretch": 1.61
+              },
+              {
+                "relationship": {
+                  "id": "auth-core",
+                  "from": "auth",
+                  "to": "core",
+                  "label": "security · db",
+                  "collectionIndex": 6,
+                  "artifactIndex": 7
+                },
+                "bends": 4,
+                "stretch": 1.32
               }
             ]
           },
           "leadingSpace": {
             "measured": true,
-            "emptyTopPx": 30,
-            "emptyTopRatio": 0.066,
-            "occupiedTop": 30,
+            "emptyTopPx": 50,
+            "emptyTopRatio": 0.088,
+            "occupiedTop": 50,
             "viewBoxTop": 0,
-            "canvasHeight": 458,
+            "canvasHeight": 568,
             "typicalNodeHeight": 60,
             "reviewSuggested": false
           },
           "desktopReadability": {
             "budgetBasis": "recognized-declared-wide",
             "readerContract": "declared-wide-v1",
-            "availableDiagramWidth": 930,
-            "actualBudgetPx": 930,
-            "actualReaderWidth": 960,
-            "desiredReaderWidth": 960,
+            "availableDiagramWidth": 935.1851851851852,
+            "actualBudgetPx": 935.1851851851852,
+            "actualReaderWidth": 965.1851851851852,
+            "desiredReaderWidth": 965.1851851851852,
             "viewportCap": 1376,
             "limit": "source-size",
             "requestedTargetPx": 7.5,
@@ -463,132 +383,125 @@
             "hardFloorPx": 6,
             "hardFloorMet": true,
             "minimumOwner": {
-              "kind": "node",
-              "id": "repo"
+              "kind": "edge",
+              "id": "bot-warns",
+              "from": "bot",
+              "to": "warns"
             },
             "minimumSourceTextPx": 8.1,
-            "minimumProjectedTextPx": 8.1,
-            "semanticTextCount": 22
+            "minimumProjectedTextPx": 7.5,
+            "semanticTextCount": 26
           },
           "issues": [
             {
               "severity": "info",
               "code": "composition/label-route-ownership",
-              "label": "aiosqlite",
+              "label": "HTTPS · JWT / API key",
               "labelRelationship": {
-                "id": "repo-db",
-                "from": "repo",
-                "to": "db",
-                "label": "aiosqlite",
+                "id": "http-api",
+                "from": "http",
+                "to": "api",
+                "label": "HTTPS · JWT / API key",
+                "collectionIndex": 1,
+                "artifactIndex": 2
+              },
+              "otherRelationship": {
+                "id": "api-warns",
+                "from": "api",
+                "to": "warns",
+                "label": "GET warns",
                 "collectionIndex": 4,
                 "artifactIndex": 5
               },
-              "otherRelationship": {
-                "id": "api-repo",
-                "from": "api",
-                "to": "repo",
-                "label": "async SQL",
-                "collectionIndex": 3,
-                "artifactIndex": 4
-              },
-              "ownClearance": 6,
+              "ownClearance": 34,
               "otherClearance": 0,
               "labelRect": {
-                "x": 498.4,
-                "y": 217,
-                "width": 53.2,
+                "x": 240.6,
+                "y": 312,
+                "width": 110.8,
                 "height": 14
               },
-              "detail": "Label \"aiosqlite\" is closer to relationship id \"api-repo\" (\"api\" -> \"repo\") than to its own route."
+              "detail": "Label \"HTTPS · JWT / API key\" is closer to relationship id \"api-warns\" (\"api\" -> \"warns\") than to its own route."
             },
             {
-              "severity": "warning",
-              "code": "composition/label-route-clearance",
-              "label": "aiosqlite",
+              "severity": "info",
+              "code": "composition/label-route-ownership",
+              "label": "SQLAlchemy",
               "labelRelationship": {
-                "id": "repo-db",
-                "from": "repo",
-                "to": "db",
-                "label": "aiosqlite",
-                "collectionIndex": 4,
-                "artifactIndex": 5
-              },
-              "otherRelationship": {
-                "id": "api-repo",
-                "from": "api",
-                "to": "repo",
-                "label": "async SQL",
-                "collectionIndex": 3,
-                "artifactIndex": 4
-              },
-              "segmentIndex": 2,
-              "labelRect": {
-                "x": 498.4,
-                "y": 217,
-                "width": 53.2,
-                "height": 14
-              },
-              "clearance": 0,
-              "intersectionLength": 1,
-              "threshold": 2,
-              "from": [
-                504,
-                276
-              ],
-              "to": [
-                504,
-                230
-              ]
-            },
-            {
-              "severity": "warning",
-              "code": "composition/label-route-clearance",
-              "label": "aiosqlite",
-              "labelRelationship": {
-                "id": "repo-db",
-                "from": "repo",
-                "to": "db",
-                "label": "aiosqlite",
-                "collectionIndex": 4,
-                "artifactIndex": 5
-              },
-              "otherRelationship": {
-                "id": "archify",
-                "from": "archify",
-                "to": "repo",
-                "label": "diagramy architektury",
+                "id": "warns-core",
+                "from": "warns",
+                "to": "core",
+                "label": "SQLAlchemy",
                 "collectionIndex": 5,
                 "artifactIndex": 6
               },
-              "segmentIndex": 2,
+              "otherRelationship": {
+                "id": "api-warns",
+                "from": "api",
+                "to": "warns",
+                "label": "GET warns",
+                "collectionIndex": 4,
+                "artifactIndex": 5
+              },
+              "ownClearance": 6,
+              "otherClearance": 2,
               "labelRect": {
-                "x": 498.4,
-                "y": 217,
-                "width": 53.2,
+                "x": 555.5,
+                "y": 247,
+                "width": 58,
+                "height": 14
+              },
+              "detail": "Label \"SQLAlchemy\" is closer to relationship id \"api-warns\" (\"api\" -> \"warns\") than to its own route."
+            },
+            {
+              "severity": "warning",
+              "code": "composition/label-route-clearance",
+              "label": "HTTPS · JWT / API key",
+              "labelRelationship": {
+                "id": "http-api",
+                "from": "http",
+                "to": "api",
+                "label": "HTTPS · JWT / API key",
+                "collectionIndex": 1,
+                "artifactIndex": 2
+              },
+              "otherRelationship": {
+                "id": "api-warns",
+                "from": "api",
+                "to": "warns",
+                "label": "GET warns",
+                "collectionIndex": 4,
+                "artifactIndex": 5
+              },
+              "segmentIndex": 0,
+              "labelRect": {
+                "x": 240.6,
+                "y": 312,
+                "width": 110.8,
                 "height": 14
               },
               "clearance": 0,
-              "intersectionLength": 6,
+              "intersectionLength": 14,
               "threshold": 2,
               "from": [
-                504,
-                144
+                348,
+                330
               ],
               "to": [
-                504,
-                223
+                348,
+                245
               ]
             }
           ]
         },
         "provenance": "current",
-        "deliveryReceiptId": "858af44e-875a-44b5-b889-f9d11b4e4c3c"
+        "deliveryReceiptId": "711e3866-b8c2-460a-ae49-687ef79a5e9e"
       }
     },
     "browser-check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 1663,
+      "durationMs": 1669,
       "command": [
         "C:\\Program Files\\nodejs\\node.exe",
         "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\.agents\\skills\\archify\\bin\\archify.mjs",
@@ -606,11 +519,11 @@
         "status": "pass",
         "visualReview": "not-requested",
         "provenance": "current",
-        "deliveryReceiptId": "858af44e-875a-44b5-b889-f9d11b4e4c3c",
+        "deliveryReceiptId": "711e3866-b8c2-460a-ae49-687ef79a5e9e",
         "artifact": {
           "path": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.html",
-          "sha256": "3bf3d54251154f94e49fc9c891f29270532c553f1601b89c032e1e773882a7b2",
-          "bytes": 930251
+          "sha256": "f3ec794a691f4b9c5cb4fb6f7847da3154fd2bfc5fb7321008f236ce7ca8baf5",
+          "bytes": 933868
         },
         "state": {
           "detail": "read",
@@ -641,25 +554,27 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1334,
-              "diagramWidth": 1200,
+              "readerWidth": 1357,
+              "diagramWidth": 1327,
               "pageComposition": {
                 "bodyPaddingPx": 12,
                 "headerPx": 52,
-                "diagramChromePx": 137,
-                "svgPx": 687,
+                "diagramChromePx": 78,
+                "svgPx": 746,
                 "cardsPx": 0,
-                "viewBoxHeight": 458
+                "viewBoxHeight": 568
               },
-              "viewBoxWidth": 800,
+              "viewBoxWidth": 1010,
               "minimumProjectedNodeTextPx": 8.1,
-              "minimumProjectedNonEdgeTextPx": 8.1,
-              "minimumProjectedEdgeTextPx": 10,
-              "minimumProjectedNodeText": "BaseRepository / SqliteRepository",
-              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNonEdgeTextPx": 9,
+              "minimumProjectedEdgeTextPx": 8.1,
+              "minimumProjectedNodeText": "cogs → use cases",
+              "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "repo"
+                "kind": "edge",
+                "id": "bot-warns",
+                "from": "bot",
+                "to": "warns"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -667,10 +582,10 @@
               "hasNavigationDock": true,
               "legendDockIntersectionArea": 0,
               "dockStageIntersectionArea": 0,
-              "dockStageGap": 21.5,
+              "dockStageGap": 10,
               "requiredDockStageGap": 10,
               "viewerChromeStageOk": true,
-              "viewerChromeReserve": 18,
+              "viewerChromeReserve": 54,
               "viewerChromeActive": true,
               "viewerChromeOk": true,
               "resolvedTheme": "light"
@@ -691,25 +606,27 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1487,
-              "diagramWidth": 1200,
+              "readerWidth": 1417,
+              "diagramWidth": 1387,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 60,
-                "diagramChromePx": 177,
-                "svgPx": 687,
+                "diagramChromePx": 84,
+                "svgPx": 780,
                 "cardsPx": 0,
-                "viewBoxHeight": 458
+                "viewBoxHeight": 568
               },
-              "viewBoxWidth": 800,
+              "viewBoxWidth": 1010,
               "minimumProjectedNodeTextPx": 8.1,
-              "minimumProjectedNonEdgeTextPx": 8.1,
-              "minimumProjectedEdgeTextPx": 10,
-              "minimumProjectedNodeText": "BaseRepository / SqliteRepository",
-              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNonEdgeTextPx": 9,
+              "minimumProjectedEdgeTextPx": 8.1,
+              "minimumProjectedNodeText": "cogs → use cases",
+              "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "repo"
+                "kind": "edge",
+                "id": "bot-warns",
+                "from": "bot",
+                "to": "warns"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -717,11 +634,11 @@
               "hasNavigationDock": true,
               "legendDockIntersectionArea": 0,
               "dockStageIntersectionArea": 0,
-              "dockStageGap": 29.5,
+              "dockStageGap": 10,
               "requiredDockStageGap": 10,
               "viewerChromeStageOk": true,
-              "viewerChromeReserve": 0,
-              "viewerChromeActive": false,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
               "viewerChromeOk": true,
               "resolvedTheme": "light"
             },
@@ -741,25 +658,27 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1627,
-              "diagramWidth": 1200,
+              "readerWidth": 1573,
+              "diagramWidth": 1515,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 60,
-                "diagramChromePx": 257,
-                "svgPx": 687,
+                "diagramChromePx": 92,
+                "svgPx": 852,
                 "cardsPx": 0,
-                "viewBoxHeight": 458
+                "viewBoxHeight": 568
               },
-              "viewBoxWidth": 800,
+              "viewBoxWidth": 1010,
               "minimumProjectedNodeTextPx": 8.1,
-              "minimumProjectedNonEdgeTextPx": 8.1,
-              "minimumProjectedEdgeTextPx": 10,
-              "minimumProjectedNodeText": "BaseRepository / SqliteRepository",
-              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNonEdgeTextPx": 9,
+              "minimumProjectedEdgeTextPx": 8.1,
+              "minimumProjectedNodeText": "cogs → use cases",
+              "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "repo"
+                "kind": "edge",
+                "id": "bot-warns",
+                "from": "bot",
+                "to": "warns"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -767,11 +686,11 @@
               "hasNavigationDock": true,
               "legendDockIntersectionArea": 0,
               "dockStageIntersectionArea": 0,
-              "dockStageGap": 69.5,
+              "dockStageGap": 10,
               "requiredDockStageGap": 10,
               "viewerChromeStageOk": true,
-              "viewerChromeReserve": 0,
-              "viewerChromeActive": false,
+              "viewerChromeReserve": 46,
+              "viewerChromeActive": true,
               "viewerChromeOk": true,
               "resolvedTheme": "light"
             },
@@ -792,24 +711,26 @@
               "readerFit": "intrinsic-height",
               "ok": true,
               "readerWidth": 1920,
-              "diagramWidth": 1200,
+              "diagramWidth": 1515,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 68,
-                "diagramChromePx": 489,
-                "svgPx": 687,
+                "diagramChromePx": 324,
+                "svgPx": 852,
                 "cardsPx": 0,
-                "viewBoxHeight": 458
+                "viewBoxHeight": 568
               },
-              "viewBoxWidth": 800,
+              "viewBoxWidth": 1010,
               "minimumProjectedNodeTextPx": 8.1,
-              "minimumProjectedNonEdgeTextPx": 8.1,
-              "minimumProjectedEdgeTextPx": 10,
-              "minimumProjectedNodeText": "BaseRepository / SqliteRepository",
-              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNonEdgeTextPx": 9,
+              "minimumProjectedEdgeTextPx": 8.1,
+              "minimumProjectedNodeText": "cogs → use cases",
+              "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "repo"
+                "kind": "edge",
+                "id": "bot-warns",
+                "from": "bot",
+                "to": "warns"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -817,7 +738,7 @@
               "hasNavigationDock": true,
               "legendDockIntersectionArea": 0,
               "dockStageIntersectionArea": 0,
-              "dockStageGap": 185.5,
+              "dockStageGap": 103,
               "requiredDockStageGap": 10,
               "viewerChromeStageOk": true,
               "viewerChromeReserve": 0,
@@ -894,25 +815,27 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1334,
-              "diagramWidth": 1200,
+              "readerWidth": 1357,
+              "diagramWidth": 1327,
               "pageComposition": {
                 "bodyPaddingPx": 12,
                 "headerPx": 52,
-                "diagramChromePx": 137,
-                "svgPx": 687,
+                "diagramChromePx": 78,
+                "svgPx": 746,
                 "cardsPx": 0,
-                "viewBoxHeight": 458
+                "viewBoxHeight": 568
               },
-              "viewBoxWidth": 800,
+              "viewBoxWidth": 1010,
               "minimumProjectedNodeTextPx": 8.1,
-              "minimumProjectedNonEdgeTextPx": 8.1,
-              "minimumProjectedEdgeTextPx": 10,
-              "minimumProjectedNodeText": "BaseRepository / SqliteRepository",
-              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNonEdgeTextPx": 9,
+              "minimumProjectedEdgeTextPx": 8.1,
+              "minimumProjectedNodeText": "cogs → use cases",
+              "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "repo"
+                "kind": "edge",
+                "id": "bot-warns",
+                "from": "bot",
+                "to": "warns"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -920,10 +843,10 @@
               "hasNavigationDock": true,
               "legendDockIntersectionArea": 0,
               "dockStageIntersectionArea": 0,
-              "dockStageGap": 21.5,
+              "dockStageGap": 10,
               "requiredDockStageGap": 10,
               "viewerChromeStageOk": true,
-              "viewerChromeReserve": 18,
+              "viewerChromeReserve": 54,
               "viewerChromeActive": true,
               "viewerChromeOk": true,
               "resolvedTheme": "light"
@@ -944,25 +867,27 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1487,
-              "diagramWidth": 1200,
+              "readerWidth": 1417,
+              "diagramWidth": 1387,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 60,
-                "diagramChromePx": 177,
-                "svgPx": 687,
+                "diagramChromePx": 84,
+                "svgPx": 780,
                 "cardsPx": 0,
-                "viewBoxHeight": 458
+                "viewBoxHeight": 568
               },
-              "viewBoxWidth": 800,
+              "viewBoxWidth": 1010,
               "minimumProjectedNodeTextPx": 8.1,
-              "minimumProjectedNonEdgeTextPx": 8.1,
-              "minimumProjectedEdgeTextPx": 10,
-              "minimumProjectedNodeText": "BaseRepository / SqliteRepository",
-              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNonEdgeTextPx": 9,
+              "minimumProjectedEdgeTextPx": 8.1,
+              "minimumProjectedNodeText": "cogs → use cases",
+              "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "repo"
+                "kind": "edge",
+                "id": "bot-warns",
+                "from": "bot",
+                "to": "warns"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -970,11 +895,11 @@
               "hasNavigationDock": true,
               "legendDockIntersectionArea": 0,
               "dockStageIntersectionArea": 0,
-              "dockStageGap": 29.5,
+              "dockStageGap": 10,
               "requiredDockStageGap": 10,
               "viewerChromeStageOk": true,
-              "viewerChromeReserve": 0,
-              "viewerChromeActive": false,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
               "viewerChromeOk": true,
               "resolvedTheme": "light"
             },
@@ -994,25 +919,27 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1627,
-              "diagramWidth": 1200,
+              "readerWidth": 1573,
+              "diagramWidth": 1515,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 60,
-                "diagramChromePx": 257,
-                "svgPx": 687,
+                "diagramChromePx": 92,
+                "svgPx": 852,
                 "cardsPx": 0,
-                "viewBoxHeight": 458
+                "viewBoxHeight": 568
               },
-              "viewBoxWidth": 800,
+              "viewBoxWidth": 1010,
               "minimumProjectedNodeTextPx": 8.1,
-              "minimumProjectedNonEdgeTextPx": 8.1,
-              "minimumProjectedEdgeTextPx": 10,
-              "minimumProjectedNodeText": "BaseRepository / SqliteRepository",
-              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNonEdgeTextPx": 9,
+              "minimumProjectedEdgeTextPx": 8.1,
+              "minimumProjectedNodeText": "cogs → use cases",
+              "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "repo"
+                "kind": "edge",
+                "id": "bot-warns",
+                "from": "bot",
+                "to": "warns"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1020,11 +947,11 @@
               "hasNavigationDock": true,
               "legendDockIntersectionArea": 0,
               "dockStageIntersectionArea": 0,
-              "dockStageGap": 69.5,
+              "dockStageGap": 10,
               "requiredDockStageGap": 10,
               "viewerChromeStageOk": true,
-              "viewerChromeReserve": 0,
-              "viewerChromeActive": false,
+              "viewerChromeReserve": 46,
+              "viewerChromeActive": true,
               "viewerChromeOk": true,
               "resolvedTheme": "light"
             },
@@ -1045,24 +972,26 @@
               "readerFit": "intrinsic-height",
               "ok": true,
               "readerWidth": 1920,
-              "diagramWidth": 1200,
+              "diagramWidth": 1515,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 68,
-                "diagramChromePx": 489,
-                "svgPx": 687,
+                "diagramChromePx": 324,
+                "svgPx": 852,
                 "cardsPx": 0,
-                "viewBoxHeight": 458
+                "viewBoxHeight": 568
               },
-              "viewBoxWidth": 800,
+              "viewBoxWidth": 1010,
               "minimumProjectedNodeTextPx": 8.1,
-              "minimumProjectedNonEdgeTextPx": 8.1,
-              "minimumProjectedEdgeTextPx": 10,
-              "minimumProjectedNodeText": "BaseRepository / SqliteRepository",
-              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNonEdgeTextPx": 9,
+              "minimumProjectedEdgeTextPx": 8.1,
+              "minimumProjectedNodeText": "cogs → use cases",
+              "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "repo"
+                "kind": "edge",
+                "id": "bot-warns",
+                "from": "bot",
+                "to": "warns"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1070,7 +999,7 @@
               "hasNavigationDock": true,
               "legendDockIntersectionArea": 0,
               "dockStageIntersectionArea": 0,
-              "dockStageGap": 185.5,
+              "dockStageGap": 103,
               "requiredDockStageGap": 10,
               "viewerChromeStageOk": true,
               "viewerChromeReserve": 0,
@@ -1099,25 +1028,27 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1334,
-              "diagramWidth": 1200,
+              "readerWidth": 1357,
+              "diagramWidth": 1327,
               "pageComposition": {
                 "bodyPaddingPx": 12,
                 "headerPx": 52,
-                "diagramChromePx": 137,
-                "svgPx": 687,
+                "diagramChromePx": 78,
+                "svgPx": 746,
                 "cardsPx": 0,
-                "viewBoxHeight": 458
+                "viewBoxHeight": 568
               },
-              "viewBoxWidth": 800,
+              "viewBoxWidth": 1010,
               "minimumProjectedNodeTextPx": 8.1,
-              "minimumProjectedNonEdgeTextPx": 8.1,
-              "minimumProjectedEdgeTextPx": 10,
-              "minimumProjectedNodeText": "BaseRepository / SqliteRepository",
-              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNonEdgeTextPx": 9,
+              "minimumProjectedEdgeTextPx": 8.1,
+              "minimumProjectedNodeText": "cogs → use cases",
+              "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "repo"
+                "kind": "edge",
+                "id": "bot-warns",
+                "from": "bot",
+                "to": "warns"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1125,10 +1056,10 @@
               "hasNavigationDock": true,
               "legendDockIntersectionArea": 0,
               "dockStageIntersectionArea": 0,
-              "dockStageGap": 21.5,
+              "dockStageGap": 10,
               "requiredDockStageGap": 10,
               "viewerChromeStageOk": true,
-              "viewerChromeReserve": 18,
+              "viewerChromeReserve": 54,
               "viewerChromeActive": true,
               "viewerChromeOk": true,
               "resolvedTheme": "light"
@@ -1149,25 +1080,27 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1487,
-              "diagramWidth": 1200,
+              "readerWidth": 1417,
+              "diagramWidth": 1387,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 60,
-                "diagramChromePx": 177,
-                "svgPx": 687,
+                "diagramChromePx": 84,
+                "svgPx": 780,
                 "cardsPx": 0,
-                "viewBoxHeight": 458
+                "viewBoxHeight": 568
               },
-              "viewBoxWidth": 800,
+              "viewBoxWidth": 1010,
               "minimumProjectedNodeTextPx": 8.1,
-              "minimumProjectedNonEdgeTextPx": 8.1,
-              "minimumProjectedEdgeTextPx": 10,
-              "minimumProjectedNodeText": "BaseRepository / SqliteRepository",
-              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNonEdgeTextPx": 9,
+              "minimumProjectedEdgeTextPx": 8.1,
+              "minimumProjectedNodeText": "cogs → use cases",
+              "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "repo"
+                "kind": "edge",
+                "id": "bot-warns",
+                "from": "bot",
+                "to": "warns"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1175,11 +1108,11 @@
               "hasNavigationDock": true,
               "legendDockIntersectionArea": 0,
               "dockStageIntersectionArea": 0,
-              "dockStageGap": 29.5,
+              "dockStageGap": 10,
               "requiredDockStageGap": 10,
               "viewerChromeStageOk": true,
-              "viewerChromeReserve": 0,
-              "viewerChromeActive": false,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
               "viewerChromeOk": true,
               "resolvedTheme": "light"
             },
@@ -1199,25 +1132,27 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1627,
-              "diagramWidth": 1200,
+              "readerWidth": 1573,
+              "diagramWidth": 1515,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 60,
-                "diagramChromePx": 257,
-                "svgPx": 687,
+                "diagramChromePx": 92,
+                "svgPx": 852,
                 "cardsPx": 0,
-                "viewBoxHeight": 458
+                "viewBoxHeight": 568
               },
-              "viewBoxWidth": 800,
+              "viewBoxWidth": 1010,
               "minimumProjectedNodeTextPx": 8.1,
-              "minimumProjectedNonEdgeTextPx": 8.1,
-              "minimumProjectedEdgeTextPx": 10,
-              "minimumProjectedNodeText": "BaseRepository / SqliteRepository",
-              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNonEdgeTextPx": 9,
+              "minimumProjectedEdgeTextPx": 8.1,
+              "minimumProjectedNodeText": "cogs → use cases",
+              "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "repo"
+                "kind": "edge",
+                "id": "bot-warns",
+                "from": "bot",
+                "to": "warns"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1225,11 +1160,11 @@
               "hasNavigationDock": true,
               "legendDockIntersectionArea": 0,
               "dockStageIntersectionArea": 0,
-              "dockStageGap": 69.5,
+              "dockStageGap": 10,
               "requiredDockStageGap": 10,
               "viewerChromeStageOk": true,
-              "viewerChromeReserve": 0,
-              "viewerChromeActive": false,
+              "viewerChromeReserve": 46,
+              "viewerChromeActive": true,
               "viewerChromeOk": true,
               "resolvedTheme": "light"
             },
@@ -1250,24 +1185,26 @@
               "readerFit": "intrinsic-height",
               "ok": true,
               "readerWidth": 1920,
-              "diagramWidth": 1200,
+              "diagramWidth": 1515,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 68,
-                "diagramChromePx": 489,
-                "svgPx": 687,
+                "diagramChromePx": 324,
+                "svgPx": 852,
                 "cardsPx": 0,
-                "viewBoxHeight": 458
+                "viewBoxHeight": 568
               },
-              "viewBoxWidth": 800,
+              "viewBoxWidth": 1010,
               "minimumProjectedNodeTextPx": 8.1,
-              "minimumProjectedNonEdgeTextPx": 8.1,
-              "minimumProjectedEdgeTextPx": 10,
-              "minimumProjectedNodeText": "BaseRepository / SqliteRepository",
-              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNonEdgeTextPx": 9,
+              "minimumProjectedEdgeTextPx": 8.1,
+              "minimumProjectedNodeText": "cogs → use cases",
+              "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
-                "kind": "node",
-                "id": "repo"
+                "kind": "edge",
+                "id": "bot-warns",
+                "from": "bot",
+                "to": "warns"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1275,7 +1212,7 @@
               "hasNavigationDock": true,
               "legendDockIntersectionArea": 0,
               "dockStageIntersectionArea": 0,
-              "dockStageGap": 185.5,
+              "dockStageGap": 103,
               "requiredDockStageGap": 10,
               "viewerChromeStageOk": true,
               "viewerChromeReserve": 0,
@@ -1334,15 +1271,15 @@
     },
     "reference": "references/delivery-contract.md#architecture-diagnosis-offer"
   },
-  "finishedAt": "2026-11-23T18:30:51.834Z",
-  "durationMs": 3162,
+  "finishedAt": "2026-11-23T18:42:30.899Z",
+  "durationMs": 3005,
   "update": {
     "status": "current",
     "installedVersion": "3.3.0",
     "availableVersion": "3.3.0",
     "releaseNotes": null,
     "checkedAt": "2026-11-23T18:30:48.908Z",
-    "source": "network",
+    "source": "cache",
     "noticeRequired": false,
     "noticeText": null
   }

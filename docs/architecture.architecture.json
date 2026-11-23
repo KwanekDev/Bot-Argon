@@ -2,7 +2,7 @@
   "schema_version": 1,
   "diagram_type": "architecture",
   "meta": {
-    "title": "Bot Argon — architecture",
+    "title": "Bot Argon — modular clean architecture",
     "output": "docs/architecture.html",
     "visual_preset": "signal-flow",
     "quality_profile": "standard"
@@ -14,7 +14,7 @@
       "label": "Discord",
       "sublabel": "użytkownicy / serwery",
       "pos": [
-        60,
+        40,
         130
       ],
       "size": [
@@ -26,10 +26,10 @@
       "id": "http",
       "type": "cloud",
       "label": "HTTP klienci",
-      "sublabel": "frontend / usługi",
+      "sublabel": "panel / usługi",
       "pos": [
-        60,
-        330
+        40,
+        380
       ],
       "size": [
         150,
@@ -40,91 +40,104 @@
       "id": "bot",
       "type": "backend",
       "label": "Bot (discord.py)",
-      "sublabel": "bot.py + cogs/",
+      "sublabel": "app/modules/discord_bot · cogs",
       "pos": [
-        310,
-        90
+        280,
+        80
       ],
       "size": [
-        170,
+        190,
         70
       ]
     },
     {
       "id": "api",
       "type": "backend",
-      "label": "API (FastAPI)",
-      "sublabel": "api/main.py → routers",
+      "label": "FastAPI",
+      "sublabel": "app/app.py",
       "pos": [
-        310,
-        300
-      ],
-      "size": [
-        170,
-        70
-      ]
-    },
-    {
-      "id": "repo",
-      "type": "backend",
-      "label": "Repository",
-      "sublabel": "BaseRepository / SqliteRepository",
-      "pos": [
-        310,
-        200
-      ],
-      "size": [
-        170,
-        60
-      ]
-    },
-    {
-      "id": "db",
-      "type": "database",
-      "label": "SQLite",
-      "sublabel": "warns, users, api_keys",
-      "pos": [
-        570,
-        200
-      ],
-      "size": [
-        160,
-        70
-      ]
-    },
-    {
-      "id": "archify",
-      "type": "backend",
-      "label": "Archify",
-      "sublabel": ".agents/skills/archify",
-      "pos": [
-        570,
-        60
+        280,
+        330
       ],
       "size": [
         150,
         60
+      ]
+    },
+    {
+      "id": "warns",
+      "type": "backend",
+      "label": "Module: warns",
+      "sublabel": "use cases · repository",
+      "pos": [
+        540,
+        100
+      ],
+      "size": [
+        170,
+        60
+      ]
+    },
+    {
+      "id": "auth",
+      "type": "backend",
+      "label": "Module: authentication",
+      "sublabel": "JWT · API keys",
+      "pos": [
+        540,
+        270
+      ],
+      "size": [
+        180,
+        60
+      ]
+    },
+    {
+      "id": "core",
+      "type": "backend",
+      "label": "Core",
+      "sublabel": "settings · db · security",
+      "pos": [
+        540,
+        420
+      ],
+      "size": [
+        160,
+        60
+      ]
+    },
+    {
+      "id": "sqlite",
+      "type": "database",
+      "label": "SQLite",
+      "sublabel": "warns · users · api_keys",
+      "pos": [
+        780,
+        270
+      ],
+      "size": [
+        160,
+        70
       ]
     }
   ],
   "boundaries": [
     {
       "kind": "region",
-      "label": "Bot Argon (repo)",
+      "label": "Moduły aplikacji",
       "wraps": [
         "bot",
         "api",
-        "repo",
-        "db",
-        "archify"
+        "warns",
+        "auth"
       ]
     },
     {
       "kind": "region",
       "label": "Warstwa danych",
       "wraps": [
-        "repo",
-        "db"
+        "core",
+        "sqlite"
       ]
     }
   ],
@@ -133,48 +146,73 @@
       "id": "d-bot",
       "from": "discord",
       "to": "bot",
-      "label": "Gateway / intents"
+      "label": "Gateway / intents",
+      "labelAt": [
+        296,
+        60
+      ]
     },
     {
       "id": "http-api",
       "from": "http",
       "to": "api",
-      "label": "HTTPS · JWT / API key"
-    },
-    {
-      "id": "bot-repo",
-      "from": "bot",
-      "to": "repo",
-      "label": "warns (DatabaseManager)",
-      "fromSide": "bottom",
-      "toSide": "left"
-    },
-    {
-      "id": "api-repo",
-      "from": "api",
-      "to": "repo",
-      "label": "async SQL",
-      "fromSide": "top",
-      "toSide": "right",
+      "label": "HTTPS · JWT / API key",
       "labelAt": [
-        452,
-        274
+        296,
+        322
       ]
     },
     {
-      "id": "repo-db",
-      "from": "repo",
-      "to": "db",
-      "label": "aiosqlite"
+      "id": "bot-warns",
+      "from": "bot",
+      "to": "warns",
+      "label": "cogs → use cases",
+      "labelAt": [
+        500,
+        60
+      ]
     },
     {
-      "id": "archify",
-      "from": "archify",
-      "to": "repo",
-      "label": "diagramy architektury",
+      "id": "api-auth",
+      "from": "api",
+      "to": "auth",
+      "label": "login · API keys",
+      "fromSide": "top",
+      "toSide": "left"
+    },
+    {
+      "id": "api-warns",
+      "from": "api",
+      "to": "warns",
+      "label": "GET warns",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "warns-core",
+      "from": "warns",
+      "to": "core",
+      "label": "SQLAlchemy",
       "fromSide": "bottom",
-      "toSide": "right",
-      "variant": "dashed"
+      "toSide": "top"
+    },
+    {
+      "id": "auth-core",
+      "from": "auth",
+      "to": "core",
+      "label": "security · db",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        627,
+        344
+      ]
+    },
+    {
+      "id": "core-db",
+      "from": "core",
+      "to": "sqlite",
+      "label": "async engine"
     }
   ]
 }

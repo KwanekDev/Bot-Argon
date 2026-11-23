@@ -144,16 +144,23 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LIC
 
 The repository also ships an HTTP API sharing the same SQLite database:
 
-- `uvicorn api.main:app --reload` → `http://127.0.0.1:8000` (OpenAPI under `/docs`).
-- Endpoints: `GET /health`, `POST /api/v1/auth/token` (OAuth2 form → JWT),
-  `GET /api/v1/auth/me`, `GET /api/v1/warns` (JWT), `GET /api/v1/admin/health`
-  (`X-API-Key` header).
-- Setup: copy `.env.example` to `.env` and set `SECRET_KEY`; run
-  `pip install -r requirements-dev.txt` and `pytest` for the test suite.
-- See [AGENTS.md](AGENTS.md) for the full repository map and agent conventions.
+- Run: uvicorn app.app:app --reload (OpenAPI under /docs).
+- Endpoints: GET /health; POST /api/v1/auth/token (OAuth2 form → JWT);
+  GET /api/v1/auth/me; GET /api/v1/warns (JWT); GET /api/v1/admin/health
+  (X-API-Key header); admin-only API-key lifecycle under /api/v1/admin/api-keys.
+- Setup: copy .env.example to .env and set SECRET_KEY; run
+  pip install -r requirements-dev.txt and pytest for the test suite.
+- See AGENTS.md for the full repository map and agent conventions.
+
+## Architecture
+
+The codebase follows modular Clean Architecture + DDD (app/core/ + app/modules/
+with domain/application/infrastructure/presentation layers per module). The Discord
+bot and the FastAPI app are separate processes sharing the same SQLite database
+(SQLAlchemy async + Alembic migrations). See AGENTS.md for the full map.
 
 ## Architecture diagram (Archify)
 
-An interactive architecture diagram lives at [docs/architecture.html](docs/architecture.html)
-(source: `docs/architecture.architecture.json`). Regenerate it with the bundled Archify
-skill after structural changes (see `AGENTS.md`).
+An interactive architecture diagram lives at docs/architecture.html
+(source: docs/architecture.architecture.json). Regenerate it with the bundled Archify
+skill after structural changes (see AGENTS.md).

@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "858af44e-875a-44b5-b889-f9d11b4e4c3c",
+  "receiptId": "711e3866-b8c2-460a-ae49-687ef79a5e9e",
   "status": "current",
   "command": "deliver",
   "type": "architecture",
   "input": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.architecture.json",
   "output": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.html",
   "specification": {
-    "sha256": "b2145239200b7c58cd527ea4fa4b48410470e045489fc3f00c9e9b2eca06f517",
-    "bytes": 3101
+    "sha256": "11a5a318fab7e1a6393dcad2bd5fe6895fdeecb417d5905bad53b93636d27b84",
+    "bytes": 3731
   },
   "artifact": {
-    "sha256": "3bf3d54251154f94e49fc9c891f29270532c553f1601b89c032e1e773882a7b2",
-    "bytes": 930251
+    "sha256": "f3ec794a691f4b9c5cb4fb6f7847da3154fd2bfc5fb7321008f236ce7ca8baf5",
+    "bytes": 933868
   }
 }
