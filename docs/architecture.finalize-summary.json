@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "standard",
+  "specification": {
+    "path": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.architecture.json",
+    "sha256": "b2145239200b7c58cd527ea4fa4b48410470e045489fc3f00c9e9b2eca06f517",
+    "bytes": 3101
+  },
+  "artifact": {
+    "path": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.html",
+    "sha256": "3bf3d54251154f94e49fc9c891f29270532c553f1601b89c032e1e773882a7b2",
+    "bytes": 930251
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.finalize.json",
+    "summaryReceipt": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.browser-check.json"
+  },
+  "repositoryReferences": {
+    "status": "not-declared",
+    "count": 0,
+    "guidance": "For a repository diagram, pin meta.repository and cite the source ranges on its primary elements, then rerun finalize."
+  },
+  "codeAnalysisOffer": {
+    "action": "offer-code-analysis",
+    "reason": "Archify’s built-in Architecture Diagnosis adds component findings, a radial star map, and a rotatable 3D view of repository dependencies.",
+    "instruction": "Use the referenced pitch once per repository and wait for consent before starting.",
+    "dependencies": "installed",
+    "diagramButton": false,
+    "quality": "standard",
+    "start": {
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\.agents\\skills\\archify\\bin\\archify.mjs",
+        "start",
+        "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon",
+        "--ir",
+        "C:\\Users\\Kwanek\\Documents\\ChatGPT\\Bot Argon\\docs\\architecture.architecture.json",
+        "--quality",
+        "standard"
+      ]
+    },
+    "reference": "references/delivery-contract.md#architecture-diagnosis-offer"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.3.0",
+    "availableVersion": "3.3.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-23T18:30:48.908Z",
+    "source": "network",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3162,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 1,
+      "routesOverSuggestedBends": 3
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "api-repo",
+            "from": "api",
+            "to": "repo",
+            "label": "async SQL",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "right": {
+            "id": "repo-db",
+            "from": "repo",
+            "to": "db",
+            "label": "aiosqlite",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "point": [
+            503.96662954709575,
+            237
+          ],
+          "sharedNode": "repo"
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "bot-repo",
+            "from": "bot",
+            "to": "repo",
+            "label": "warns (DatabaseManager)",
+            "collectionIndex": 2,
+            "artifactIndex": 3
+          },
+          "bends": 3,
+          "stretch": 1.31
+        },
+        {
+          "relationship": {
+            "id": "api-repo",
+            "from": "api",
+            "to": "repo",
+            "label": "async SQL",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "bends": 3,
+          "stretch": 1.31
+        },
+        {
+          "relationship": {
+            "id": "archify",
+            "from": "archify",
+            "to": "repo",
+            "label": "diagramy architektury",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "api → repo and repo → db cross next to repo: move node api or db so the two reach repo from different sides (for example one level with it, one directly above or below it).",
+      "bot → repo needs 3 bends: move node bot or repo so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "api → repo needs 3 bends: move node api or repo so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "archify → repo needs 3 bends: move node archify or repo so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

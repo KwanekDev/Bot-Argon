@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Bot Argon — architecture",
+    "output": "docs/architecture.html",
+    "visual_preset": "signal-flow",
+    "quality_profile": "standard"
+  },
+  "components": [
+    {
+      "id": "discord",
+      "type": "cloud",
+      "label": "Discord",
+      "sublabel": "użytkownicy / serwery",
+      "pos": [
+        60,
+        130
+      ],
+      "size": [
+        150,
+        60
+      ]
+    },
+    {
+      "id": "http",
+      "type": "cloud",
+      "label": "HTTP klienci",
+      "sublabel": "frontend / usługi",
+      "pos": [
+        60,
+        330
+      ],
+      "size": [
+        150,
+        60
+      ]
+    },
+    {
+      "id": "bot",
+      "type": "backend",
+      "label": "Bot (discord.py)",
+      "sublabel": "bot.py + cogs/",
+      "pos": [
+        310,
+        90
+      ],
+      "size": [
+        170,
+        70
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "API (FastAPI)",
+      "sublabel": "api/main.py → routers",
+      "pos": [
+        310,
+        300
+      ],
+      "size": [
+        170,
+        70
+      ]
+    },
+    {
+      "id": "repo",
+      "type": "backend",
+      "label": "Repository",
+      "sublabel": "BaseRepository / SqliteRepository",
+      "pos": [
+        310,
+        200
+      ],
+      "size": [
+        170,
+        60
+      ]
+    },
+    {
+      "id": "db",
+      "type": "database",
+      "label": "SQLite",
+      "sublabel": "warns, users, api_keys",
+      "pos": [
+        570,
+        200
+      ],
+      "size": [
+        160,
+        70
+      ]
+    },
+    {
+      "id": "archify",
+      "type": "backend",
+      "label": "Archify",
+      "sublabel": ".agents/skills/archify",
+      "pos": [
+        570,
+        60
+      ],
+      "size": [
+        150,
+        60
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Bot Argon (repo)",
+      "wraps": [
+        "bot",
+        "api",
+        "repo",
+        "db",
+        "archify"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Warstwa danych",
+      "wraps": [
+        "repo",
+        "db"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "d-bot",
+      "from": "discord",
+      "to": "bot",
+      "label": "Gateway / intents"
+    },
+    {
+      "id": "http-api",
+      "from": "http",
+      "to": "api",
+      "label": "HTTPS · JWT / API key"
+    },
+    {
+      "id": "bot-repo",
+      "from": "bot",
+      "to": "repo",
+      "label": "warns (DatabaseManager)",
+      "fromSide": "bottom",
+      "toSide": "left"
+    },
+    {
+      "id": "api-repo",
+      "from": "api",
+      "to": "repo",
+      "label": "async SQL",
+      "fromSide": "top",
+      "toSide": "right",
+      "labelAt": [
+        452,
+        274
+      ]
+    },
+    {
+      "id": "repo-db",
+      "from": "repo",
+      "to": "db",
+      "label": "aiosqlite"
+    },
+    {
+      "id": "archify",
+      "from": "archify",
+      "to": "repo",
+      "label": "diagramy architektury",
+      "fromSide": "bottom",
+      "toSide": "right",
+      "variant": "dashed"
+    }
+  ]
+}
