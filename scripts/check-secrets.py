@@ -13,6 +13,10 @@ KEY_ANY = re.compile(r'(?i)\b(token|secret|password|passwd|api[_-]?key|client[_-
 VALID_SECRET = re.compile(r'^[A-Za-z0-9_\.:\-]{16,}$')
 KNOWN_PREFIX = re.compile(r'(?i)(sk-|xox[bap]-|ghp_|github_pat_|AKIA[0-9A-Z]{16}|AIza[0-9A-Za-z_-]{35}|-----BEGIN [A-Z ]*PRIVATE KEY-----)')
 PLACEHOLDER = re.compile(r'(?i)(YOUR_|CHANGE-ME|HERE|xxx|placeholder|example|dummy|^<.*>$)')
+WEAK_SECRETS = {
+    "admin123", "password", "password123", "123456", "12345678",
+    "qwerty", "secret", "changeme", "test", "test123",
+}
 
 
 def main() -> int:
@@ -30,6 +34,9 @@ def main() -> int:
         for m in KEY_ANY.finditer(text):
             val = m.group(2).strip().strip("'")
             if PLACEHOLDER.search(val):
+                continue
+            if val.lower() in WEAK_SECRETS:
+                problems.append(f"{f}: {m.group(1)}={val[:40]}")
                 continue
             if KNOWN_PREFIX.search(val):
                 problems.append(f"{f}: {val[:50]}")

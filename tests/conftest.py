@@ -17,6 +17,9 @@ from httpx import ASGITransport, AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
 
+from credentials import ADMIN_PASSWORD, ADMIN_USERNAME
+
+
 def run_migrations(url: str) -> None:
     cfg = Config(str(ROOT / "alembic.ini"))
     cfg.set_main_option("sqlalchemy.url", url)
@@ -44,7 +47,7 @@ async def db_file(tmp_path):
     await seed_defaults(factory)
     async with factory() as session:
         users = SqlAlchemyUserRepository(session)
-        await users.create("admin", hash_password("admin123"), "admin")
+        await users.create(ADMIN_USERNAME, hash_password(ADMIN_PASSWORD), "admin")
         owner = await users.get_by_username("admin")
         raw_key = secrets.token_urlsafe(32)
         keys = SqlAlchemyApiKeyRepository(session)

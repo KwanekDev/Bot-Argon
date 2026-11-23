@@ -1,3 +1,5 @@
+from credentials import ADMIN_PASSWORD
+
 async def test_health(client):
     response = await client.get("/health")
     assert response.status_code == 200
@@ -7,7 +9,7 @@ async def test_health(client):
 async def test_login_success(client):
     response = await client.post(
         "/api/v1/auth/token",
-        data={"username": "admin", "password": "admin123"},
+        data={"username": "admin", "password": ADMIN_PASSWORD},
     )
     assert response.status_code == 200
     body = response.json()
@@ -32,7 +34,7 @@ async def test_me_with_token(client):
     token = (
         await client.post(
             "/api/v1/auth/token",
-            data={"username": "admin", "password": "admin123"},
+            data={"username": "admin", "password": ADMIN_PASSWORD},
         )
     ).json()["access_token"]
     response = await client.get(
@@ -50,7 +52,7 @@ async def test_warns_with_token(client):
     token = (
         await client.post(
             "/api/v1/auth/token",
-            data={"username": "admin", "password": "admin123"},
+            data={"username": "admin", "password": ADMIN_PASSWORD},
         )
     ).json()["access_token"]
     response = await client.get(
@@ -86,7 +88,7 @@ async def test_api_key_lifecycle(client):
     admin_token = (
         await client.post(
             "/api/v1/auth/token",
-            data={"username": "admin", "password": "admin123"},
+            data={"username": "admin", "password": ADMIN_PASSWORD},
         )
     ).json()["access_token"]
     headers = {"Authorization": f"Bearer {admin_token}"}

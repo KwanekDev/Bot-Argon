@@ -1,3 +1,5 @@
+from credentials import ADMIN_PASSWORD
+
 from datetime import datetime, timedelta
 
 from app.modules.verification.application.interfaces import RobloxProfileClient
@@ -146,7 +148,7 @@ async def test_verification_confirm_expired(db_file):
 async def admin_token(client):
     response = await client.post(
         "/api/v1/auth/token",
-        data={"username": "admin", "password": "admin123"},
+        data={"username": "admin", "password": ADMIN_PASSWORD},
     )
     return response.json()["access_token"]
 
