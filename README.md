@@ -1,8 +1,8 @@
 # Bot Argon
 
-Bot Argon to modularny backend oraz bot Discord współdzielące jedną bazę danych, zbudowane według zasad Clean Architecture i Domain-Driven Design. Każda funkcja jest wydzielonym modułem o czterech warstwach (domain → application → infrastructure → presentation), a zależności między modułami prowadzą wyłącznie do wewnątrz.
 
-Projekt składa się z dwóch procesów:
+
+Dwa procesy:
 
 - **API** — FastAPI (async, SQLAlchemy + Alembic),
 - **bot Discord** — discord.py, z cogami.
