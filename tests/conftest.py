@@ -6,6 +6,7 @@ from pathlib import Path
 
 os.environ.setdefault("SECRET_KEY", "test-secret-key-0123456789abcdefghijklmnopqrstuv")
 os.environ.setdefault("SLOWAPI_ENABLED", "false")
+os.environ.setdefault("ENVIRONMENT", "test")
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))

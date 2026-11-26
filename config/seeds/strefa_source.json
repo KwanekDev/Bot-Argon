@@ -1,0 +1,1659 @@
+{
+  "meta": {
+    "project": "Bot Strefa Argon (src z Downloads)",
+    "source": "C:/Users/Kwanek/Downloads/bot strefa angor/src",
+    "generated": "2026-11-25T18:15:19.981Z",
+    "note": "Brak uzycia WebhookClient — tresci to embedy/wiadomosci wysylane przez bota na kanaly i DM.",
+    "config": {
+      "client_id": "1307023522517745674",
+      "guild_id": "1297167121318412369",
+      "channels": {
+        "create_character": "1299089004712689674",
+        "create_test": "1317206956565336188",
+        "public_app_logs": "1299089747658145884",
+        "application_logs": "1307332308499566632",
+        "character_logs": "1307762138244452402",
+        "tests_logs": "1317171522020048988",
+        "welcome_channel": "1297181125264932965"
+      },
+      "permissions": {
+        "accept_characters": [
+          "1297167315548246116"
+        ],
+        "accept_tests": [
+          "1297167315548246116",
+          "1297175540649955390"
+        ]
+      },
+      "activity": {
+        "type": 0,
+        "name": "🌲 SCP Strefa Argon RolePlay"
+      },
+      "status": "Online"
+    },
+    "color_change": {
+      "from": "#007f2e (kolor przewodni zielony)",
+      "to": "#b4d1ee",
+      "replaced_entries": 3,
+      "note": "Podmiana koloru przewodniego wykonana tylko w tym pliku JSON; kod źródłowy bota nie był zmieniany."
+    }
+  },
+  "commands": [
+    {
+      "file": "fun/jak-zrobic-wlasne-teamy.js",
+      "name": "jak-zrobic-wlasne-teamy",
+      "description": "jak zrobic wlasne teamy",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": []
+    },
+    {
+      "file": "main/ankieta-roleplay.js",
+      "name": "ankieta-roleplay",
+      "description": "Komenda służąca do tworzenia ankiet Roleplay.",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "pierwsza-godzina",
+          "description": "Pierwsza godzina w ankiecie.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "druga-godzina",
+          "description": "Druga godzina w ankiecie.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "trzecia-godzina",
+          "description": "Trzecia godzina w ankiecie.",
+          "required": false,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "main/black-lista.js",
+      "name": "black-lista",
+      "description": "Komenda służąca do wstawienia Czarnej Listy graczowi.",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "osoba",
+          "description": "Osoba, której chcesz wstawić Czarną Listę.",
+          "required": true,
+          "type": "User"
+        },
+        {
+          "name": "powod",
+          "description": "Powód otrzymania Czarnej Listy przez gracza.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "odwolanie",
+          "description": "Czy można się odwołać od Czarnej Listy?",
+          "required": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "main/credits.js",
+      "name": "credits",
+      "description": "Twórcy bota.",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": []
+    },
+    {
+      "file": "main/decyzja-roleplay.js",
+      "name": "decyzja-roleplay",
+      "description": "Komenda służąca do tworzenia decyzji o Sesji Roleplay.",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "godzina",
+          "description": "Godzina startu Sesji Roleplay.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "prowadzacy",
+          "description": "Prowadzący Sesję Roleplay.",
+          "required": true,
+          "type": "User"
+        },
+        {
+          "name": "mapa",
+          "description": "Mapa, na której odbędzie się Sesja.",
+          "required": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "main/kto-powinien-hostowac-sesje-rp.js",
+      "name": "kto-powinien-hostowac-sesje-rp",
+      "description": "Interesujące.",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": []
+    },
+    {
+      "file": "main/ostrzezenie.js",
+      "name": "ostrzezenie",
+      "description": "Komenda służąca do ostrzegania graczy.",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "typ",
+          "description": "Typ ostrzeżenia.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "osoba",
+          "description": "Osoba, którą chcesz ostrzec.",
+          "required": true,
+          "type": "User"
+        },
+        {
+          "name": "powod",
+          "description": "Powód ostrzeżenia gracza.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "numer-ostrzezenia",
+          "description": "Które ostrzeżenie z kolei.",
+          "required": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "main/rozpocznij-sesje.js",
+      "name": "rozpocznij-sesje",
+      "description": "Komenda służąca do rozpoczęcia Sesji Roleplay.",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "prowadzacy",
+          "description": "Oznacz prowadzącego Sesje.",
+          "required": true,
+          "type": "User"
+        }
+      ]
+    },
+    {
+      "file": "main/stworz-morpha.js",
+      "name": "stworz-morpha",
+      "description": "Komenda służąca do tworzenia morphów. (Jedynie dla wspierających!)",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "nick-roblox",
+          "description": "Twój nick Roblox (nickname, a nie display name)",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "id-czapek",
+          "description": "Wpisz id wszystkich czapek, każdą po przecinku.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "id-koszulki",
+          "description": "Wpisz id koszulki.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "id-spodni",
+          "description": "Wpisz id spodni.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "nazwa-morpha",
+          "description": "Proponowana przez Ciebie nazwa morpha.",
+          "required": false,
+          "type": "String"
+        },
+        {
+          "name": "noktowizja",
+          "description": "Zaznacz jedną z tych opcji jeśli chcesz aby noktowizja była na twoim morphie.",
+          "required": false,
+          "type": "String"
+        },
+        {
+          "name": "morph-gra",
+          "description": "Wpisz nazwę morpha z gry.",
+          "required": false,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "main/stworz-postac.js",
+      "name": "stworz-postac",
+      "description": "Komenda służąca do tworzenia postaci. Pamiętaj aby nie podawać prawdziwych danych!",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "nick-roblox",
+          "description": "Twój nick Roblox (nickname, a nie display name)",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "imie-i-nazwisko",
+          "description": "Imie i nazwisko twojej postaci (Imię i nazwisko dzielone spacją)",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "data-urodzenia",
+          "description": "Data urodzenia twojej postaci (format: DD/MM/YYYY np. 25/11/2020)",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "narodowosc",
+          "description": "Narodowość twojej postaci np. \"PL\"",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "departament",
+          "description": "Departament twojej postaci",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "opis",
+          "description": "Krótki opis / historia postaci.",
+          "required": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "main/stworz-wydarzenie.js",
+      "name": "stworz-wydarzenie",
+      "description": "Komenda służąca do tworzenia wydarzeń.",
+      "deleted": true,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "opis-testu",
+          "description": "Informacja, notatka od Moderatora.",
+          "required": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "main/test-aktywnosci.js",
+      "name": "test-aktywnosci",
+      "description": "Komenda służąca do tworzenia testu aktywności.",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "opis-testu",
+          "description": "Informacja, notatka od Moderatora.",
+          "required": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "main/try.js",
+      "name": "try",
+      "description": "Komenda pomagająca w akcjach Roleplay.",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "szansa-na-powodzenie",
+          "description": "Wybierz szansę na powodzenie.",
+          "required": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "main/wezwij.js",
+      "name": "wezwij",
+      "description": "Komenda służąca do wzywania graczy.",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "osoba",
+          "description": "Oznacz osobę, którą chcesz wezwać.",
+          "required": true,
+          "type": "User"
+        },
+        {
+          "name": "czas",
+          "description": "Wpisz czas, jaki osoba ma na zjawienie się.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "kanal",
+          "description": "Kanał na jaki osoba ma wejść (najlepiej poczekalnia).",
+          "required": true,
+          "type": "Channel"
+        },
+        {
+          "name": "powod",
+          "description": "Powód wezwania gracza.",
+          "required": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "main/wniosek-o-badania.js",
+      "name": "wniosek-o-badania",
+      "description": "Komenda służąca do tworzenia wniosku o badania.",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "nick-roblox",
+          "description": "Wpisz swój nick roblox.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "podmiot-scp",
+          "description": "Wybierz na jakim obiekcie ma odbyć się test.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "opis-testu",
+          "description": "Co odbędzie się na badaniu, co będzie badane etc.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "liczba-kd",
+          "description": "Liczba personelu Klasy D potrzebnej do przeprowadzenia testu.",
+          "required": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "main/zbanuj.js",
+      "name": "zbanuj",
+      "description": "Komenda służąca do banowania graczy.",
+      "deleted": false,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "typ",
+          "description": "Typ bana.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "osoba",
+          "description": "Osoba, którą chcesz zbanować.",
+          "required": true,
+          "type": "User"
+        },
+        {
+          "name": "powod",
+          "description": "Powód zbanowania gracza.",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "odwolanie",
+          "description": "Czy można się odwołać od Bana?",
+          "required": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "Template/permisje.js",
+      "name": "permisje",
+      "description": "placeholder",
+      "deleted": true,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "opcja",
+          "description": "opcja",
+          "required": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "file": "Template/template.js",
+      "name": "template",
+      "description": "template",
+      "deleted": true,
+      "devonly": false,
+      "testonly": false,
+      "permissionsRequired": [],
+      "botpermissions": [],
+      "options": [
+        {
+          "name": "opcja",
+          "description": "opcja",
+          "required": true,
+          "type": "String"
+        }
+      ]
+    }
+  ],
+  "applications": [
+    {
+      "file": "podanie_aktorzy.js",
+      "name": "Podanie do Zespołu Aktorów",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1314237302767353897",
+      "whitelistedroles": [
+        "1297171191328542752",
+        "1297167278176993341"
+      ],
+      "roletogive": [
+        "1297171192704143370",
+        "1297171154263347250"
+      ],
+      "questions": [
+        {
+          "name": "Dlaczego mielibyśmy Cię przyjąć do Zespołu Aktorów?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "W jaki sposób oznacza się anomalie i dlaczego?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "W jaki sposób odgrywałbyś rolę SCP 106?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Opisz podmiot SCP 953.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Wymień i krótko opisz 5, twoim zdaniem najciekawszych, znanych Ci anomalii.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Opisz podmiot SCP 035.",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_dep_adm.js",
+      "name": "Podanie do Departamentu Administracyjnego",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1307426987861737512",
+      "whitelistedroles": [
+        "1297175207580139610",
+        "1297167278176993341"
+      ],
+      "roletogive": [
+        "1297175549600469085",
+        "1297175540649955390"
+      ],
+      "questions": [
+        {
+          "name": "Co skłoniło cię do złożenia podania o Departamentu Administracyjnego?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Dlaczego akurat ciebie mielibyśmy przyjąć do Departamentu Administracyjnego?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jak zamierzasz się rozwijać w naszym Departamencie?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Czym twoim zdaniem zajmuje się Departament Administracyjny?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Czy uważasz że pełnienie stanowiska w instytucji jaką wybrałeś jest odpowiedzialne? Jeżeli tak to napisz dlaczego.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Czy potrafisz współpracować w zorganizowanym zespole bądź kadrze?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Czy zobowiązujesz się przychodzenia na Apele oraz Spotkania związanych z Departamentu do jakiej składasz Aplikację?",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_dep_bezp.js",
+      "name": "Podanie do Departamentu Bezpieczeństwa",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1307744119426252800",
+      "whitelistedroles": [
+        "1297176328461881377",
+        "1297167278176993341"
+      ],
+      "roletogive": [
+        "1299807026397843509",
+        "1299806952607580203"
+      ],
+      "questions": [
+        {
+          "name": "Czy posiadasz doświadczenie w formacji uzbrojonej?",
+          "type": "Button",
+          "options": [
+            {
+              "value": "opcja1",
+              "label": "Tak"
+            },
+            {
+              "value": "opcja2",
+              "label": "Nie"
+            }
+          ]
+        },
+        {
+          "name": "Czy posiadasz umiejętność współpracy w zorganizowanej grupie?",
+          "type": "Button",
+          "options": [
+            {
+              "value": "opcja1",
+              "label": "Tak"
+            },
+            {
+              "value": "opcja2",
+              "label": "Nie"
+            }
+          ]
+        },
+        {
+          "name": "Jakie są główne założenia tego departamentu?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Co zrobiłbyś w sytuacji buntu klasy-D podczas przebywania w sektorze Cywilnym?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie procedury obowiązują podczas wyłomu podmiotu?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Podczas rutynowego patrolu natrafiasz na niezidentyfikowaną anomalię w Strefie. Jakie są Twoje pierwsze działania i jakie kroki podejmiesz, aby zabezpieczyć zagrożenie?",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_dep_bezp_wewn.js",
+      "name": "Podanie do Departamentu Bezpieczeństwa Wewnętrznego",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1307778489453248663",
+      "whitelistedroles": [
+        "1297176326322651136",
+        "1297167278176993341"
+      ],
+      "roletogive": [
+        "1299807023910752297",
+        "1299806952607580203"
+      ],
+      "questions": [
+        {
+          "name": "Jakie są główne zadania tego departamentu?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Czym jest Bezpieczeństwo Wewnętrzne?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Masz dowody na to, że jeden z członków personelu łamie procedury bezpieczeństwa. Jakie działania podejmiesz, aby zabezpieczyć Strefę, jednocześnie minimalizując ryzyko chaosu?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jaka jest Twoja strategia radzenia sobie z informacjami niejawnymi? Jakich zasad przestrzegasz, aby zabezpieczyć dane przed dostaniem się w niepowołane ręce?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "W przypadku bezpośredniego zagrożenia wyciekiem informacji, jakie działania podejmiesz, aby zapobiec rozprzestrzenieniu się poufnych danych na zewnątrz Strefy?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie działania podejmiesz, jeśli personel z poziomem upoważnienia 1-3 zostanie wzięty jako zakładnik?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie działania podejmiesz, jeśli personel z poziomem upoważnienia 4 oraz 5 zostanie wzięty jako zakładnik?",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_dep_med.js",
+      "name": "Podanie do Departamentu Medycznego",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1307790674883772576",
+      "whitelistedroles": [
+        "1297176551024103434",
+        "1297167278176993341"
+      ],
+      "roletogive": [
+        "1297176845040488478",
+        "1297176813285670913"
+      ],
+      "questions": [
+        {
+          "name": "Czy posiadasz specjalizację medyczną? Jeśli tak, to jaką?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie są Twoje procedury w przypadku pacjenta z objawami nieznanej choroby?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Opisz swoje doświadczenie w pracy z pacjentami wymagającymi opieki psychologicznej po traumatycznych przeżyciach",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jak zareagujesz, jeśli zostaniesz wezwany do udzielenia pomocy medycznej obiektowi testowemu po kontakcie z anomalią?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "W jaki sposób współpracowałbyś z innymi działami Fundacji, np. naukowym lub ochrony, podczas sytuacji kryzysowej?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie są Twoje kluczowe cechy, które pomogą Ci w pracy w Departamencie Medycznym Fundacji?",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_dep_nauk.js",
+      "name": "Podanie do Departamentu Naukowego",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1307780519789858876",
+      "whitelistedroles": [
+        "1297176553125318728",
+        "1297167278176993341"
+      ],
+      "roletogive": [
+        "1297176847519318056",
+        "1297176813285670913"
+      ],
+      "questions": [
+        {
+          "name": "Co skłoniło Cię do wyboru tej ścieżki kariery w Fundacji SCP? Jakie wartości uważasz za najważniejsze w swojej pracy?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Czy kiedykolwiek pracowałeś/-aś w warunkach stresowych? Jak radzisz sobie z sytuacjami, które mogą być psychicznie obciążające?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie zasady przyjmujesz w swojej pracy, aby zawsze chronić życie i zdrowie współpracowników oraz zapewniać zgodność z misją Fundacji?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Zostało Ci zlecone przeprowadzenie testu na danym podmiocie SCP. Jakie kroki podejmiesz?",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_dep_tech.js",
+      "name": "Podanie do Departamentu Technicznego",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1307790717644701840",
+      "whitelistedroles": [
+        "1297176555323261028",
+        "1297167278176993341"
+      ],
+      "roletogive": [
+        "1297176850002477087",
+        "1297176813285670913"
+      ],
+      "questions": [
+        {
+          "name": "Czy posiadasz jakiekolwiek doświadczenie ooc związane z pracą technika lub jesteś w trakcie kształcenia w takowym kierunku?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie są Twoje kroki w diagnozowaniu usterki elektrycznej?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie środki bezpieczeństwa stosujesz podczas pracy z instalacjami elektrycznymi?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jak zareagujesz, jeśli zostaniesz wezwany do naprawy instalacji w strefie gdzie przechowywane są anomalie?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jak postąpisz, jeśli zauważysz, że istnieje ryzyko awarii, która może zagrażać bezpieczeństwu całej placówki?",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_kom_etyki.js",
+      "name": "Podanie do Komitetu ds. Etyki",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1307740633141739660",
+      "whitelistedroles": [
+        "1297175204895653898",
+        "1297167278176993341"
+      ],
+      "roletogive": [
+        "1297175540649955390",
+        "1297175547092140052"
+      ],
+      "questions": [
+        {
+          "name": "Jakie jest Twoje doświadczenie w dziedzinie etyki, prawa, psychologii lub filozofii?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie kryteria stosujesz przy ocenie działań pod kątem ich zgodności z zasadami etycznymi?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jak poradziłbyś sobie z analizą sytuacji, w której interesy Fundacji kolidują z dobrem jednostki?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jak ocenisz eksperymenty na Obiektach Klasy D w kontekście ich zgodności z zasadami etyki?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Zgłoszono naruszenie protokołów etycznych przez wysoko postawionego członka personelu. Jak przeprowadzisz dochodzenie w tej sprawie?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie cechy Twojej osobowości czynią Cię odpowiednim kandydatem do Komitetu ds. Etyki?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie działania zaproponowałbyś, aby poprawić przestrzeganie standardów etycznych w placówkach Fundacji?",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_mfo_alpha_1.js",
+      "name": "Podanie do MFO Alpha-1",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1305249351819591750",
+      "whitelistedroles": [
+        "1297175831961141369",
+        "1297167278176993341"
+      ],
+      "roletogive": [
+        "1297176050060759090",
+        "1297176008020983898"
+      ],
+      "questions": [
+        {
+          "name": "Opisz swoje doświadczenie w jednostkach typu MFO.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Opisz czym jest taktyka zielona i czarna?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Opisz i sprecyzuj czym jest B.L.O.S.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Co zrobisz gdy osoba z poziomem dostępu 3 zbliża się odległość mniejszą niż 5 metrów do O5?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Co zrobisz gdy osoba z poziomem dostępu 4 zbliża się odległość mniejszą niż 5 metrów do O5?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Napisz jakie znasz formacje i szyki.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jak się zachowasz podczas breacha w trakcie ochrony VIP'a?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jak się zachowasz gdy w placówce zostanie wykryta wroga organizacja podczas ochrony VIP'a?",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_mfo_delta_14.js",
+      "name": "Podanie do MFO Delta-14",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1314213807928639549",
+      "whitelistedroles": [
+        "1312829183105306694",
+        "1297167278176993341"
+      ],
+      "roletogive": [
+        "1297176008020983898",
+        "1312828959808815177"
+      ],
+      "questions": [
+        {
+          "name": "Opisz swoje doświadczenie w jednostkach typu MFO.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Co według ciebie powinieneś zrobić jeśli zobaczysz podmiot SCP podczas patrolu? (Min 3 zdania)",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "W skali od 1/10 jak oceniasz swoje umiejętności w walce? (w SCP: Roleplay)",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Dlaczego mielibyśmy wybrać akurat Ciebie?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Wyboraź sobię sytuację, że jesteśmy wzywani aby złapać podmiot 953 który uciekł z przechowalni, i jest aktualnie poza placówką. Co było by twoim pierwszym krokiem jako dowódca jednostki?",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_mfo_epsilon_11.js",
+      "name": "Podanie do MFO Epsilon-11",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1307789080465117238",
+      "whitelistedroles": [
+        "1297175834137989150",
+        "1297167278176993341"
+      ],
+      "roletogive": [
+        "1297176051599806524",
+        "1297176008020983898"
+      ],
+      "questions": [
+        {
+          "name": "Czy jesteś w stanie poświęcić kilka godzin na szkolenia i treningi?",
+          "type": "Button",
+          "options": [
+            {
+              "value": "opcja1",
+              "label": "Tak"
+            },
+            {
+              "value": "opcja2",
+              "label": "Nie"
+            }
+          ]
+        },
+        {
+          "name": "Czy miałeś styczność z jakąś inną elitarną jednostką bojową? Jeśli tak, opisz swoją służbę w tej jednostce. Wymagana pełna poprawność ortograficzna.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Opisz swoją osobę, uwzględnij wszystkie szczegóły i cechy. Wymagana pełna poprawność ortograficzna.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Co zrobisz w przypadku znalezienia zdjęcia SCP-096?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Opisz jakie kroki podejmiesz podczas zabezpieczania podmiotu SCP 173. Wymagana pełna poprawność ortograficzna.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jak zabezpieczyć podmiot SCP-096?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Co zrobisz jeśli jakiś departament blokuję ci drogę?",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_mfo_nu_7.js",
+      "name": "Podanie do MFO Nu-7",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1307788739463872632",
+      "whitelistedroles": [
+        "1297175836469891072",
+        "1297167278176993341"
+      ],
+      "roletogive": [
+        "1297176053701410857",
+        "1297176008020983898"
+      ],
+      "questions": [
+        {
+          "name": "Dlaczego chcesz dołączyć do MFO Nu-7?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Co wiesz o MFO Nu-7 i czym się zajmuje?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie doświadczenie posiadasz w operacjach zbrojnych, zabezpieczaniu obiektów strategicznych lub działaniach ofensywnych?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jak poradziłbyś sobie z obsługą i naprawą ciężkiego sprzętu w warunkach bojowych?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie kroki podejmiesz, jeśli misja wymaga jednoczesnego zabezpieczenia obiektu SCP i neutralizacji wrogich sił?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Podczas misji Twoja drużyna znajduje się pod ostrzałem wroga. Musisz zdecydować, czy przejść do kontrataku, czy zabezpieczyć SCP w pobliskim obiekcie. Co robisz?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie są Twoje mocne strony, które wyróżniają Cię jako kandydata do MFO Nu-7?",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_organizacje_przyjazne.js",
+      "name": "Podanie na Organizację Przyjazną",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1309513400723705927",
+      "whitelistedroles": [
+        "1297167315548246116"
+      ],
+      "roletogive": [
+        "1297177012024377397"
+      ],
+      "questions": [
+        {
+          "name": "Podaj nazwę organizacji.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Link do serwera Discord organizacji:",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Opisz jak zamierzacie współpracować z placówką.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Jakie są wasze główne cele i zasady działania?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Dlaczego uważasz, że Twoja organizacja będzie wartościowa i co będzie wnosić do gry?",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    },
+    {
+      "file": "podanie_organizacje_wrogie.js",
+      "name": "Podanie na Organizację Wrogą",
+      "description": null,
+      "parent": "1299089699104624680",
+      "sendTo": "1309513376539344937",
+      "whitelistedroles": [
+        "1297167315548246116"
+      ],
+      "roletogive": [
+        "1297177012024377397"
+      ],
+      "questions": [
+        {
+          "name": "Podaj nazwę organizacji.",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Link do serwera Discord organizacji:",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Opis celu i działań organizacji (Jakie są główne cele organizacji? Jakie działania planujecie podejmować?",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Dlaczego uważasz, że Twoja organizacja wniesie coś ciekawego do gry?:",
+          "type": "Open",
+          "options": []
+        },
+        {
+          "name": "Czy posiadacie zasady działania w organizacji? Jeśli tak, dołącz je:",
+          "type": "Open",
+          "options": []
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "file": "guildMemberAdd/welcomeMessage.js",
+      "messages": [
+        {
+          "kind": "content",
+          "value": "||${member.user}||"
+        },
+        {
+          "kind": "setcolor",
+          "value": "#b4d1ee"
+        },
+        {
+          "kind": "footer",
+          "text": "Strefa Argon RolePlay",
+          "icon": "https://i.postimg.cc/3xVDPgNV/obraz-2025-07-17-164958411.png"
+        },
+        {
+          "kind": "setdescription",
+          "value": "## <:ArgonRolePlay:1309860034460782614> I ARGON ROLEPLAY・POWITANIA\\n* Witaj nowy graczu ${member.user} społeczności serwera Argon RolePlay, czyli Polskiej sceny RolePlayowej o tematyce SCP. Samo RP jest prowadzone na platformie Roblox na grze \"SCP:ROLEPLAY\" Przed zapoczątkowaniem rozgrywki na naszym serwerze powinieneś zapoznać się z poniższymi wiadomościami:\\n\n* 1. Przed oficialnym dołączeniem do naszej społeczności należy zaakceptować Regulamin czyli zasady serwera jakimi nasza społeczności się kieruje podczas uczestnictwa w naszej społeczności: <#1297174909348348026>\n\n* 2. Po zaakceptowaniu Regulaminu należy stworzyć swoją pierwszą postać (Można mieć ich maksymalnie 3) w celu uczestnictwa w Sesji RP, pamiętaj że jeżeli gracz jako Klasa-D nie musisz mieć Stworzonej postaci: <#1299089004712689674> \n\n* 3. Jeżeli będziesz chciał dostać się do jakiejś z Frakcji jaka wymaga złożenia do niej podania, to wejdź na kanał: <#1299089699104624680> oraz złóż podanie poprzez wiadomości wysyłane do naszego bota na czat prywatny. Więcej o frakcjach dowiesz się na kanale: <#1299089627986137108>\n\n* 4. O organizacjach Sesji RolePlay będziesz informowany na kanale: <#1299089876146327562> zaś nad sesją będziesz mógł zagłosować (Kiedy ma się odbyć) na kanale: <#1299089959382421554>\n\n* 5. Jeżeli będziesz potrzebował pomocy to utwórz zgłoszenia pod daną kategorią na kanale: <#1299091790653161523> lub napisz wiadomość tekstową na tym kanale: <#1299091877106159717>\n\n* 6. Jeżeli zdecydujesz się na wejście na sesję roleplay i jesteś nowy, warto zapoznać się z standardowymi informacjami jakie znajdziesz na kanałach: <#1297180660091322428>, <#1297180929982332968>, <#1297180967949176963>\n            "
+        },
+        {
+          "kind": "setthumbnail_raw",
+          "value": "member.user.displayAvatarURL({ dynamic: true, size: 512 })"
+        }
+      ]
+    },
+    {
+      "file": "interactionCreate/handleAppConfirmations.js",
+      "messages": [
+        {
+          "kind": "content",
+          "value": "Nie udało się zidentyfikować użytkownika na podstawie aplikacji."
+        },
+        {
+          "kind": "content",
+          "value": "Wystąpił błąd podczas pobierania informacji o użytkowniku."
+        },
+        {
+          "kind": "content",
+          "value": "Nie posiadasz wymaganych ról, aby wykonać tę akcję."
+        },
+        {
+          "kind": "content",
+          "value": "Nie udało się przypisać roli."
+        },
+        {
+          "kind": "content",
+          "value": "Aplikacja została zaakceptowana."
+        },
+        {
+          "kind": "content",
+          "value": "✅ ・ ${AppUser} właśnie zdał/a aplikację \"**${application.name}**\". Rekrutacja została zaakceptowana przez ${interaction.member}"
+        },
+        {
+          "kind": "content",
+          "value": "Aplikacja została odrzucona."
+        },
+        {
+          "kind": "content",
+          "value": "❌  ・ ${AppUser} nie zdał/a aplikacji \"**${application.name}**\". Rekrutacja została odrzucona przez ${interaction.member}"
+        },
+        {
+          "kind": "settitle",
+          "value": "Aplikacja ${application.name} została zaakceptowana"
+        },
+        {
+          "kind": "setdescription",
+          "value": "Aplikacja: [Kliknij tutaj](${interaction.message.url})\\nAdministrator: ${interaction.user}"
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "Colors.DarkGreen"
+        },
+        {
+          "kind": "fields",
+          "fields": [
+            {
+              "name": "Użytkownik",
+              "value": "${AppUser}",
+              "inline": false
+            },
+            {
+              "name": "Role nadane",
+              "value": "${RoleToGive.map(role => `<@&${role}>`).join(\", \")}",
+              "inline": false
+            }
+          ]
+        },
+        {
+          "kind": "footer",
+          "text": "Zaakceptowane przez: ${interaction.user.tag}",
+          "icon": null
+        },
+        {
+          "kind": "settitle",
+          "value": "Twoja aplikacja została zaakceptowana!"
+        },
+        {
+          "kind": "setdescription",
+          "value": "Gratulacje! Twoja aplikacja **\"${application.name}\"** została zaakceptowana."
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "Colors.DarkGreen"
+        },
+        {
+          "kind": "footer",
+          "text": "Zaakceptowane przez: ${interaction.user.tag}",
+          "icon": null
+        },
+        {
+          "kind": "settitle",
+          "value": "Aplikacja ${application.name} została odrzucona"
+        },
+        {
+          "kind": "setdescription",
+          "value": "Aplikacja: [Kliknij tutaj](${interaction.message.url})\\nAdministrator: ${interaction.user}"
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "Colors.DarkRed"
+        },
+        {
+          "kind": "fields",
+          "fields": [
+            {
+              "name": "Użytkownik",
+              "value": "${AppUser}",
+              "inline": false
+            }
+          ]
+        },
+        {
+          "kind": "footer",
+          "text": "Odrzucone przez: ${interaction.user.tag}",
+          "icon": null
+        },
+        {
+          "kind": "settitle",
+          "value": "Twoja aplikacja została odrzucona."
+        },
+        {
+          "kind": "setdescription",
+          "value": "Niestety, Twoja aplikacja **\"${application.name}\"** została odrzucona."
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "Colors.DarkRed"
+        },
+        {
+          "kind": "footer",
+          "text": "Odrzucone przez: ${interaction.user.tag}",
+          "icon": null
+        }
+      ]
+    },
+    {
+      "file": "interactionCreate/handleApplications.js",
+      "messages": [
+        {
+          "kind": "content",
+          "value": "Nie znaleziono aplikacji. Spróbuj ponownie później."
+        },
+        {
+          "kind": "content",
+          "value": "Proces aplikacji anulowany."
+        },
+        {
+          "kind": "content",
+          "value": "Proces aplikacji rozpoczęty. Zaczynajmy!"
+        },
+        {
+          "kind": "content",
+          "value": "Wybrałeś opcję: ${selectedOption.label}"
+        },
+        {
+          "kind": "content",
+          "value": "Wystąpił błąd. Spróbuj ponownie później."
+        },
+        {
+          "kind": "settitle",
+          "value": "Aplikacja: ${selectedApplication.name}"
+        },
+        {
+          "kind": "setdescription",
+          "value": "Jesteś pewien, że chcesz rozpocząć rekrutację?\n\nGdy zaczniesz aplikować zostaną Ci wysłane pytania. Masz 60 minut na odpowiedź. Jeśli się nie zmieścisz w czasie, musisz zacząć do nowa. Jeśli chcesz anulować, naciśnij przycisk do anulowania."
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "Colors.Blurple"
+        },
+        {
+          "kind": "settitle",
+          "value": "Pytanie #${questionNumber}/${totalQuestions}"
+        },
+        {
+          "kind": "setdescription_raw",
+          "value": "questionText"
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "Colors.Blurple"
+        },
+        {
+          "kind": "footer",
+          "text": "Pytanie otwarte!",
+          "icon": null
+        },
+        {
+          "kind": "settitle",
+          "value": "Dziękujemy za wypełnienie aplikacji!"
+        },
+        {
+          "kind": "setdescription",
+          "value": "Przejrzymy Twoje odpowiedzi i skontaktujemy się z Tobą wkrótce."
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "Colors.Green"
+        },
+        {
+          "kind": "settitle",
+          "value": "${selectedApplication.name}"
+        },
+        {
+          "kind": "setdescription",
+          "value": "Od użytkownika: ${user}\\nZebrane odpowiedzi:"
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "Colors.Blurple"
+        },
+        {
+          "kind": "fields",
+          "fields": [
+            {
+              "name": "Pytanie #${index + 1}: ${response.question}",
+              "value": "Odpowiedź: ${response.answer}",
+              "inline": false
+            }
+          ]
+        },
+        {
+          "kind": "settitle",
+          "value": "Za długo trwała odpowiedź"
+        },
+        {
+          "kind": "setdescription",
+          "value": "Proces aplikacji został zakończony. Proszę spróbuj ponownie."
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "Colors.Yellow"
+        }
+      ]
+    },
+    {
+      "file": "interactionCreate/handleCharacterConfirmations.js",
+      "messages": [
+        {
+          "kind": "content",
+          "value": "Nie masz uprawnień do zatwierdzania/odrzucania postaci."
+        },
+        {
+          "kind": "content",
+          "value": "Nie udało się zidentyfikować użytkownika na podstawie aplikacji."
+        },
+        {
+          "kind": "content",
+          "value": "Wystąpił błąd podczas pobierania informacji o użytkowniku."
+        },
+        {
+          "kind": "content",
+          "value": "Pomyślnie ${isAccepting ? \"zatwierdzono\" : \"odrzucono\"} postać."
+        },
+        {
+          "kind": "settitle",
+          "value": "Twoja postać została ${isAccepting ? \"zatwierdzona\" : \"odrzucona\"}!"
+        },
+        {
+          "kind": "setdescription",
+          "value": "${isAccepting ? \"Gratulacje! Twoja postać została rozpatrzona pozytywnie.\" : \"Niestety! Twoja postać została odrzucona, jeżeli masz zastrzeżenia dotyczące odrzucenia stwórz Ticketa. Pamiętaj że postać możesz złożyć kolejny raz z poprawkami.\"}"
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "isAccepting ? Colors.DarkGreen : Colors.DarkRed"
+        },
+        {
+          "kind": "footer",
+          "text": "${isAccepting ? \"Zatwierdzone\" : \"Odrzucone\"} przez: ${interaction.user.tag}",
+          "icon": null
+        },
+        {
+          "kind": "footer",
+          "text": "${isAccepting ? \"Zatwierdzone\" : \"Odrzucone\"} przez: ${interaction.user.tag}",
+          "icon": null
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "isAccepting ? Colors.DarkGreen : Colors.DarkRed"
+        },
+        {
+          "kind": "settitle",
+          "value": "Postać została ${isAccepting ? \"zatwierdzona\" : \"odrzucona\"}"
+        },
+        {
+          "kind": "setdescription",
+          "value": "Postać: [Kliknij tutaj](${interaction.message.url})\\nAdministrator: ${interaction.user}"
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "isAccepting ? Colors.DarkGreen : Colors.DarkRed"
+        },
+        {
+          "kind": "footer",
+          "text": "${isAccepting ? \"Zatwierdzone\" : \"Odrzucone\"} przez: ${interaction.user.tag}",
+          "icon": null
+        }
+      ]
+    },
+    {
+      "file": "interactionCreate/handleCommands.js",
+      "messages": [
+        {
+          "kind": "content",
+          "value": "only developers are allowed to run this command"
+        },
+        {
+          "kind": "content",
+          "value": "This command cannot be run here"
+        },
+        {
+          "kind": "content",
+          "value": "Not enough permissions"
+        },
+        {
+          "kind": "content",
+          "value": "i dont have enough permissions"
+        }
+      ]
+    },
+    {
+      "file": "interactionCreate/handleTestConfirmation.js",
+      "messages": [
+        {
+          "kind": "content",
+          "value": "Nie masz uprawnień do zatwierdzania/odrzucania testów."
+        },
+        {
+          "kind": "content",
+          "value": "Pomyślnie ${isAccepting ? \"zatwierdzono\" : \"odrzucono\"} wniosek."
+        },
+        {
+          "kind": "settitle",
+          "value": "Twój wniosek został ${isAccepting ? \"zatwierdzony\" : \"odrzucony\"}!"
+        },
+        {
+          "kind": "setdescription",
+          "value": "${isAccepting ? \"Gratulacje! Twój wniosek o przeprowadzenie bania został zatwierdzony!\" : \"Niestety! Twój wniosek o badania został odrzucony. Jeżeli masz zastrzeżenia dotyczące odrzucenia stwórz Ticketa. Pamiętaj że wniosek możesz złożyć kolejny raz z poprawkami.\"}"
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "isAccepting ? Colors.DarkGreen : Colors.DarkRed"
+        },
+        {
+          "kind": "footer",
+          "text": "${isAccepting ? \"Zatwierdzone\" : \"Odrzucone\"} przez: ${interaction.user.tag}",
+          "icon": null
+        },
+        {
+          "kind": "footer",
+          "text": "${isAccepting ? \"Zatwierdzone\" : \"Odrzucone\"} przez: ${interaction.user.tag}",
+          "icon": null
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "isAccepting ? Colors.DarkGreen : Colors.DarkRed"
+        },
+        {
+          "kind": "settitle",
+          "value": "Wniosek został ${isAccepting ? \"zatwierdzony\" : \"odrzucony\"}"
+        },
+        {
+          "kind": "setdescription",
+          "value": "Wniosek: [Kliknij tutaj](${interaction.message.url})\\nAdministrator: ${interaction.user}"
+        },
+        {
+          "kind": "setcolor_raw",
+          "value": "isAccepting ? Colors.DarkGreen : Colors.DarkRed"
+        },
+        {
+          "kind": "footer",
+          "text": "${isAccepting ? \"Zatwierdzone\" : \"Odrzucone\"} przez: ${interaction.user.tag}",
+          "icon": null
+        }
+      ]
+    },
+    {
+      "file": "messageCreate/boostDetection.js",
+      "messages": [
+        {
+          "kind": "content",
+          "value": "||${message.member}||"
+        },
+        {
+          "kind": "setcolor",
+          "value": "#b4d1ee"
+        },
+        {
+          "kind": "setdescription",
+          "value": "## <:ArgonRolePlay:1309860034460782614> I ARGON ROLEPLAY - DZIĘKUJEMY ZA BOOSTA\\n* Dziękujemy ${message.member} za zboostowanie naszego serwera! Od dzisiaj należysz do grona Wspierjących naszego projektu co daje ci pewne korzyści które zostały określone na tym kanale: <#1301268506364481556> ❤️"
+        },
+        {
+          "kind": "footer",
+          "text": "Strefa Argon RolePlay",
+          "icon": "https://i.postimg.cc/3xVDPgNV/obraz-2025-07-17-164958411.png"
+        }
+      ]
+    },
+    {
+      "file": "ready/01registercommands.js",
+      "messages": []
+    },
+    {
+      "file": "ready/02registerapplications.js",
+      "messages": [
+        {
+          "kind": "setcolor",
+          "value": "#b4d1ee"
+        },
+        {
+          "kind": "settitle",
+          "value": "ARGON ROLEPLAY - ZŁÓŻ PODANIE"
+        },
+        {
+          "kind": "footer",
+          "text": "Strefa Argon RolePlay",
+          "icon": "https://i.postimg.cc/3xVDPgNV/obraz-2025-07-17-164958411.png"
+        },
+        {
+          "kind": "setdescription",
+          "value": "## ARGON ROLEPLAY - INFORMACJE WSTĘPNE\\n\\n* Dzień Dobry Autoryzowany Pracowniku! W miejscu w którym się znajdujesz możesz złożyć podania do różnych jednostek lub departamentów. Podania składają się z kilku pytań i każde podanie jest unikatowe.\\n\\n**📮 | STREFA ARGON ROLEPLAY - ZŁÓZ PODANIE**\\n* Po wybraniu jednej z opcji bot wyśle ci wiadomość z zapytaniem czy na pewno chcesz aplikować. Po rozpoczęciu będziesz miał 60 minut na odpowiedzenie na wszystkie pytania. Po odesłaniu aplikacji osoby odpowiedzialne za sprawdzanie podań będą mieli 48 godzin na sprawdzenie twojej rekrutacji. Wynik zostanie ogłoszony zarówno na kanale <#1299089747658145884> jak i przez bota na twojej prywatnej wiadomości.\\n\\n**🔑 | STREFA ARGON ROLEPLAY - DRUŻYNY BEZ PODANIA**\\n* Niektóre departamenty i jednostki umożliwiają grę bez podania na najniższym stopniu. Aby natomiast awansować w tak owych drużynach musisz napisać podanie. Oto departamenty, w których możesz spróbować swoich sił bez podania:\\n  * Departament Bezpieczeństwa,\\n  * Personel Klasy D.\\n\\n**🌐 | STREFA ARGON ROLEPLAY - ORGANIZACJE**\\n* Gracze mogą tworzyć własne organizacje. Dzielą się one na Wrogie i Przyjazne względem Fundacji SCP. Aby stworzyć własną organizację musisz stworzyć własny serwer Discord oraz napisać podanie poniżej."
+        }
+      ]
+    },
+    {
+      "file": "ready/visualstuff.js",
+      "messages": []
+    }
+  ]
+}

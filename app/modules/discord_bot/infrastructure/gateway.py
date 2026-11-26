@@ -19,6 +19,7 @@ from discord.ext.commands import Context
 from dotenv import load_dotenv
 
 from app.core.database import init_db, session_factory
+from app.core.settings import get_settings
 from app.modules.discord_bot.infrastructure.repositories import BotWarnGateway
 from app.modules.permissions.application.exceptions import PermissionDenied
 from app.modules.permissions.infrastructure.repositories import SqlAlchemyCommandPermissionRepository
@@ -124,7 +125,7 @@ logger.addHandler(file_handler)
 class DiscordBot(commands.Bot):
     def __init__(self) -> None:
         super().__init__(
-            command_prefix=commands.when_mentioned_or(os.getenv("PREFIX")),
+            command_prefix=commands.when_mentioned_or(),
             intents=intents,
             help_command=None,
         )
@@ -139,42 +140,52 @@ class DiscordBot(commands.Bot):
         self.logger = logger
         self.warns = BotWarnGateway()
         self.messages = MessageService(session_factory)
-        self.bot_prefix = os.getenv("PREFIX")
-        self.invite_link = os.getenv("INVITE_LINK")
 
     async def load_cogs(self) -> None:
         """
         The code in this function is executed whenever the bot will start.
         """
-        cogs_dir = os.path.join(
-            os.path.dirname(__file__), "..", "presentation", "cogs"
-        )
-        for file in os.listdir(cogs_dir):
-            if file.endswith(".py"):
-                extension = file[:-3]
-                try:
-                    await self.load_extension(f"app.modules.discord_bot.presentation.cogs.{extension}")
-                    self.logger.info(f"Loaded extension '{extension}'")
-                except Exception as e:
-                    exception = f"{type(e).__name__}: {e}"
-                    self.logger.error(
-                        f"Failed to load extension {extension}\n{exception}"
-                    )
+        cogs_dirs = [
+            (
+                os.path.join(os.path.dirname(__file__), "..", "presentation", "cogs"),
+                "app.modules.discord_bot.presentation.cogs",
+            ),
+            (
+                os.path.join(
+                    os.path.dirname(__file__),
+                    "..", "..", "verification", "presentation", "cogs",
+                ),
+                "app.modules.verification.presentation.cogs",
+            ),
+            (
+                os.path.join(
+                    os.path.dirname(__file__),
+                    "..", "..", "strefa", "presentation", "cogs",
+                ),
+                "app.modules.strefa.presentation.cogs",
+            ),
+        ]
+        for cogs_dir, package in cogs_dirs:
+            if not os.path.isdir(cogs_dir):
+                continue
+            for file in os.listdir(cogs_dir):
+                if file.endswith(".py"):
+                    extension = file[:-3]
+                    if extension in ("helpers", "__init__"):
+                        continue
+                    try:
+                        await self.load_extension(f"{package}.{extension}")
+                        self.logger.info(f"Loaded extension '{extension}'")
+                    except Exception as e:
+                        exception = f"{type(e).__name__}: {e}"
+                        self.logger.error(
+                            f"Failed to load extension {extension}\n{exception}"
+                        )
 
-    @tasks.loop(minutes=1.0)
-    async def status_task(self) -> None:
-        """
-        Setup the game status task of the bot.
-        """
-        statuses = ["with you!", "with Krypton!", "with humans!"]
-        await self.change_presence(activity=discord.Game(random.choice(statuses)))
-
-    @status_task.before_loop
-    async def before_status_task(self) -> None:
-        """
-        Before starting the status changing task, we make sure the bot is ready
-        """
-        await self.wait_until_ready()
+    async def on_ready(self) -> None:
+        verification_cog = self.get_cog("verification")
+        if verification_cog is not None:
+            await verification_cog.ensure_static_embed()
 
     async def setup_hook(self) -> None:
         """
@@ -189,10 +200,14 @@ class DiscordBot(commands.Bot):
         self.logger.info("-------------------")
         await init_db()
         await self.load_cogs()
-        self.status_task.start()
-        verification_cog = self.get_cog("verification")
-        if verification_cog is not None:
-            await verification_cog.ensure_static_embed()
+        guild_id = get_settings().discord_guild_id
+        if guild_id:
+            guild = discord.Object(id=int(guild_id))
+            self.tree.copy_global_to(guild=guild)
+            await self.tree.sync(guild=guild)
+            self.logger.info(f"Synced slash commands to guild {guild_id}")
+        else:
+            await self.tree.sync()
 
     async def _user_allowed(self, context: Context, rule) -> bool:
         roles = {r.name for r in context.author.roles}

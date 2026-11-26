@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import asyncio
 from collections.abc import AsyncIterator
+from pathlib import Path
 
 from alembic import command
 from alembic.config import Config
@@ -27,6 +28,7 @@ async def get_session() -> AsyncIterator[AsyncSession]:
 
 
 def _run_migrations(url: str) -> None:
+    Path(_settings.database_path).resolve().parent.mkdir(parents=True, exist_ok=True)
     cfg = Config(str(PROJECT_ROOT / "alembic.ini"))
     cfg.set_main_option("sqlalchemy.url", url)
     command.upgrade(cfg, "head")

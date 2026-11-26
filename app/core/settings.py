@@ -27,6 +27,25 @@ class Settings(BaseSettings):
 
     database_path: str = "database/database.db"
     verify_channel_id: str = ""
+    discord_guild_id: str = ""
+    admin_username: str = ""
+    admin_password: str = ""
+    strefa_welcome_channel: str = ""
+    strefa_create_character_channel: str = ""
+    strefa_create_test_channel: str = ""
+    strefa_application_logs_channel: str = ""
+    strefa_public_app_logs_channel: str = ""
+    strefa_character_logs_channel: str = ""
+    strefa_tests_logs_channel: str = ""
+    strefa_boost_channel: str = ""
+    strefa_accept_characters_role: str = ""
+    strefa_accept_tests_role: str = ""
+    strefa_supporter_role: str = ""
+    strefa_dev_ids: str = ""
+    strefa_ping_role: str = ""
+    strefa_applications_parent_channel: str = ""
+    strefa_poll_emojis: str = "👍,👎"
+    strefa_warns_logs_channel: str = ""
 
     @property
     def database_url(self) -> str:

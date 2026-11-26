@@ -1,0 +1,3 @@
+FLAGS: [('verify_static_sent', '1575214444768919655'), ('presence_activity', '🌲 SCP Strefa Argon RolePlay'), ('presence_type', '0'), ('presence_status', 'online')]
+APPS: 14
+CMDS: [('ankieta-roleplay', 0), ('black-lista', 0), ('credits', 0), ('decyzja-roleplay', 0), ('jak-zrobic-wlasne-teamy', 0), ('kto-powinien-hostowac-sesje-rp', 0), ('ostrzezenie', 0), ('permisje', 1), ('rozpocznij-sesje', 0), ('stworz-morpha', 0), ('stworz-postac', 0), ('stworz-wydarzenie', 1), ('template', 1), ('test-aktywnosci', 0), ('try', 0), ('wezwij', 0), ('wniosek-o-badania', 0), ('zbanuj', 0)]

@@ -22,7 +22,7 @@ module with four layers; dependencies point inward only.
   - content/ — content_templates (JSON payloads) for all embeds; CRUD via admin API.
   - webhooks/ — webhooks store, WebhookSender (aiohttp) and MessageService (template → webhook/channel).
   - permissions/ — command_permissions matrix (roles/permissions) enforced in gateway.before_invoke.
-  - discord_bot/ — bot: cogs in presentation/cogs/, BotWarnGateway bridges cogs to warns; MessageService for deny messages.
+  - discord_bot/ — bot: cogs in presentation/cogs/ (obecnie tylko owner.py; verification.py ładuje się z własnego modułu), BotWarnGateway bridges cogs to warns; MessageService for deny messages.
 - migrations/ — Alembic scripts (0001 initial, 0002 verification/content/webhooks/permissions; applied+seeded on startup).
 - config/seeds/ — embeds.json and permissions.json (edit here to change defaults).
 - tests/ — pytest + httpx integration tests.

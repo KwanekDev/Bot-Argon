@@ -137,3 +137,11 @@ Suite używa pytest-asyncio (tryb auto) oraz httpx do testów integracyjnych API
 ## Licencja
 
 Projekt jest udostępniony na licencji Apache 2.0 — szczegóły w [`LICENSE.md`](LICENSE.md). Startowy kod bota powstał w oparciu o [Python-Discord-Bot-Template](https://github.com/kkrypt0nn/Python-Discord-Bot-Template) (Apache-2.0).
+
+## Strefa Argon (moduł bota)
+
+- Komendy dynamiczne rejestrowane per-guild z bazy (seed: config/seeds/strefa_source.json).
+- Embedy edytowalne przez API: GET/PATCH /api/v1/admin/content/{key} (klucze strefa.*).
+- Presence/aktywność edytowalne: GET/PATCH /api/v1/admin/bot-config.
+- Aplikacje: menu per kanał, DM flow z pytaniami, decyzje staff (role whitelist).
+- Postacie/testy: workflow Zatwierdź/Odrzuć z logami.

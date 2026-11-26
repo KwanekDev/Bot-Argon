@@ -87,5 +87,160 @@
         "custom_id": "verify:start"
       }
     ]
+  },
+  "strefa.announce_poll": {
+    "title": "ANKIETA ROLEPLAY",
+    "description": "",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.announce_decision": {
+    "title": "DECYZJA ROLEPLAY",
+    "description": "",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.announce_host": {
+    "title": "HOST SESJI RP",
+    "description": "Sesje hostuje **Prowadzący**!",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.announce_start": {
+    "title": "ROZPOCZNIJ SESJĘ",
+    "description": "Sesja właśnie się rozpoczyna!",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.announce_activity": {
+    "title": "TEST AKTYWNOŚCI",
+    "description": "",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.punish_public": {
+    "title": "",
+    "description": "",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.punish_dm": {
+    "title": "",
+    "description": "",
+    "color": 15080651,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.summon": {
+    "title": "WEZWANIE",
+    "description": "",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.morph": {
+    "title": "STWÓRZ MORPHA",
+    "description": "",
+    "color": 43775,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.character_submission": {
+    "title": "WNIOSEK O POSTAĆ",
+    "description": "",
+    "color": 8233725,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.test_submission": {
+    "title": "WNIOSEK O BADANIA",
+    "description": "",
+    "color": 8233725,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.app_menu": {
+    "title": "PODANIA",
+    "description": "## <:ArgonRolePlay:1309860034460782614> I ARGON ROLEPLAY – PODANIA\n* Witaj drogi graczu! Wybierz podanie z listy poniżej.\n* Czas na odpowiedź: **60 minut**.\n* Czas rozpatrzenia: **48 godzin**.\n* Pytania wysyłamy na czat prywatny.",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.app_start": {
+    "title": "",
+    "description": "",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.app_question": {
+    "title": "",
+    "description": "",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.app_thanks": {
+    "title": "DZIĘKUJEMY!",
+    "description": "Twoja aplikacja została wysłana do administracji.",
+    "color": 2061820,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.app_result": {
+    "title": "",
+    "description": "",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.app_decision_dm": {
+    "title": "WYNIK PODANIA",
+    "description": "",
+    "color": 2061820,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.app_log": {
+    "title": "LOG PODANIA",
+    "description": "",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.welcome": {
+    "title": "",
+    "description": "",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.boost": {
+    "title": "",
+    "description": "",
+    "color": 11845230,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.try_success": {
+    "title": "UDAŁO SIĘ",
+    "description": "",
+    "color": 1599524,
+    "fields": [],
+    "buttons": []
+  },
+  "strefa.try_failure": {
+    "title": "NIE UDAŁO SIĘ",
+    "description": "",
+    "color": 7541035,
+    "fields": [],
+    "buttons": []
   }
 }
+

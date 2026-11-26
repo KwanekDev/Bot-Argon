@@ -155,3 +155,7 @@ class Verification(commands.Cog, name="verification"):
         embed = build_discord_embed(payload or {"description": "Nieznany błąd."})
         await interaction.edit_original_response(embed=embed, view=None)
 
+
+async def setup(bot: commands.Bot) -> None:
+    await bot.add_cog(Verification(bot))
+
